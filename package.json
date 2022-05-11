@@ -1,0 +1,49 @@
+{
+  "name": "daon_client",
+  "version": "0.0.1",
+  "description": "teem project",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@material-ui/core": "4.12.2",
+    "@material-ui/icons": "4.11.2",
+    "@types/next": "9.0.0",
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.9",
+    "clsx": "latest",
+    "cross-env": "^7.0.2",
+    "dayjs": "^1.10.6",
+    "env-cmd": "^10.1.0",
+    "google-maps": "^4.3.3",
+    "i18n-iso-countries": "^6.7.0",
+    "moment": "^2.29.1",
+    "next": "9.5.0",
+    "next-compose-plugins": "^2.2.1",
+    "next-images": "^1.7.0",
+    "next-redux-wrapper": "^6.0.2",
+    "next-transpile-modules": "^6.3.0",
+    "nookies": "^2.5.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-query": "^3.13.12",
+    "react-swipeable-views": "^0.13.9",
+    "react-text-mask": "^5.4.3",
+    "recoil": "^0.1.2",
+    "runtypes": "^6.2.1",
+    "suneditor": "^2.38.4",
+    "text-mask-addons": "^3.8.0"
+  },
+  "scripts": {
+    "dev": "next -p 3100",
+    "dev:production": "env-cmd -f .env.production next -p 3100",
+    "build": "env-cmd -f .env.production next build",
+    "start": "env-cmd -f .env.production next start -p 3100"
+  },
+  "devDependencies": {
+    "@types/google.maps": "^3.44.3",
+    "@types/node": "^14.11.10",
+    "@types/react": "17.0.15",
+    "@types/react-dom": "17.0.9",
+    "typescript": "4.3.5"
+  }
+}

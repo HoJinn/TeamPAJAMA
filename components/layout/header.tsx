@@ -109,13 +109,24 @@ console.log(pageName)
               src={Tel}
               alt="연락처"
             />
-            <Typography className="bold" style={{color:'#FE4B00'}}>010. 6483. 1286</Typography>
+            <Typography className="bold" style={{ color: "#FE4B00" }}>
+              010. 6483. 1286
+            </Typography>
           </Box>
         </Box>
-          <Box  borderTop={"3px solid #00B7F3"} width="100%" maxWidth="1000px" margin='0 auto' paddingX={3}>
-            <Box paddingTop={1} className={classes.btnWrap}>
+        <Box
+          borderTop={"3px solid #00B7F3"}
+          width="100%"
+          maxWidth="1000px"
+          margin="0 auto"
+          paddingX={3}
+        >
+          <Box paddingTop={1} className={classes.btnWrap}>
             <Button
-            style={{color:pageName==='/about'?theme.palette.primary.main:'#000'}}
+              style={{
+                color:
+                  pageName === "/about" ? theme.palette.primary.main : "#000",
+              }}
               title="페이지 이동"
               onClick={(_) => router.push("/about")}
               className={classes.btnClass}
@@ -123,28 +134,40 @@ console.log(pageName)
               회사 소개
             </Button>
             <Button
+              style={{
+                color:
+                  pageName === "/home" ? theme.palette.primary.main : "#000",
+              }}
               title="페이지 이동"
-              onClick={(_) => router.push("/recipes")}
+              onClick={(_) => router.push("/home")}
               className={classes.btnClass}
             >
               홈클리닝
             </Button>
             <Button
+              style={{
+                color:
+                  pageName === "/office" ? theme.palette.primary.main : "#000",
+              }}
               title="페이지 이동"
-              onClick={(_) => router.push("/notice")}
+              onClick={(_) => router.push("/office")}
               className={classes.btnClass}
             >
-              사업장청소
+              오피스클리닝
             </Button>
             <Button
+              style={{
+                color:
+                  pageName === "/virus" ? theme.palette.primary.main : "#000",
+              }}
               title="페이지 이동"
-              onClick={(_) => router.push("/notice")}
+              onClick={(_) => router.push("/virus")}
               className={classes.btnClass}
             >
               방역,소독
             </Button>
-            </Box>
           </Box>
+        </Box>
       </Box>
 
       {/* <Box

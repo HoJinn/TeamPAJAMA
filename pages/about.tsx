@@ -1,26 +1,26 @@
 import { NextPage } from 'next';
 import Layout from 'components/layout/main';
-import About from 'assets/about.png';
-import { Box, makeStyles, Typography } from '@material-ui/core';
-import theme from 'theme/theme';
-const useStyles = makeStyles((theme) => ({
-  wrapper: {
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: "center",
-    backgroundSize: 'cover',
-    width:"100%"
-  },
-}))
+import { Box, Typography } from '@material-ui/core';
+// const useStyles = makeStyles((_theme) => ({
+//   wrapper: {
+//     backgroundRepeat: 'no-repeat',
+//     backgroundPosition: "center",
+//     backgroundSize: 'cover',
+//     width:"100%"
+//   },
+// }))
 const aboutContent=[
   {title:'회사명',content:'㈜닥터크린'},
   {title:'대표자',content:'강태복'},
-  {title:'주요사업',content:'건물 위생관리업'},
+  {title:'연락처',content:'010-6483-1286'},
   {title:'주소',content:'서울특별시 강서구 공항대로 23 (우편번호 07619)'},
+  {title:'주요사업',content:'건물 위생관리업'},
   {title:'사업자등록번호',content:'527-81-02540'},
-  {title:'이메일',content:'doctorc1ean0@naver.com'}
+  {title:'이메일',content:'doctorc1ean0@naver.com'},
+  {title:'계좌번호',content:'기업은행 052-116169-01-013'}
 ]
 const Index: NextPage = () => {
-  const classes = useStyles();
+  // const classes = useStyles();
 const aboutContentMap = aboutContent.map((obj, i) => {
   return (
     <Box  key={i} borderBottom="2px solid #C4C4C4" display="flex" padding='20px 50px'>
@@ -65,7 +65,7 @@ const aboutContentMap = aboutContent.map((obj, i) => {
             </Typography>
           </Box>
         </Box>
-        <Box paddingTop={5}>
+        <Box paddingTop={5} paddingBottom={10}>
           <Box
             borderBottom="2px solid #C4C4C4"
             display="flex"
@@ -77,36 +77,6 @@ const aboutContentMap = aboutContent.map((obj, i) => {
             </Box>
           </Box>
           {aboutContentMap}
-          <Box
-            borderBottom="2px solid #C4C4C4"
-            display="flex"
-            padding="20px 50px"
-          >
-            <Box width="20%">
-              <Typography variant="body2">계좌번호</Typography>
-            </Box>
-            <Box width="80%" textAlign="center" display='flex'>
-              <Box width="50%">
-                <Typography variant="body2">
-                  기업은행
-                </Typography>
-                <Typography variant="body2">
-                  052-116169-01-013
-                </Typography>
-              </Box>
-              <Box width="50%">
-                <Typography variant="body2">
-                  닥터크린
-                </Typography>
-                <Typography variant="body2">
-                  010-6483-1286
-                </Typography>
-              </Box>
-            </Box>
-          </Box>
-        </Box>
-        <Box paddingY={3}>
-          <Box className={classes.wrapper} paddingBottom="40%" style={{backgroundImage:`url(${About})`}}></Box>
         </Box>
       </Box>
     </Layout>

@@ -57,7 +57,7 @@ const MyApp = (props: AppProps<CommProps>) => {
   return (
     <Wrapper>
       <Head>
-        <title>다온븟</title>
+        <title>닥터크린</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       <link rel="icon" href={Favicon} type="image/x-icon"></link>
         {/* 네이버 웹마스터*/}

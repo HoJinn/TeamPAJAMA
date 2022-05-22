@@ -156,7 +156,7 @@ export default createTheme({
         ,fontWeight:500
       },
       subtitle1:{
-        fontSize:pxToRem(50)
+        fontSize:pxToRem(48)
         ,[breakpoints.down(SM.max)]:{
           fontSize:pxToRem(20)
         }

@@ -103,7 +103,10 @@ const Brand: NextPage = () => {
           <Box paddingTop={3}>
             <Typography variant="body1">가족의 행복한 미래를 꿈꾸는</Typography>
             <Typography variant="body1">
-              깨끗한 주거 환경을 만들어드립니다!
+              <Typography variant="body1" component={"span"} className="bold">
+                깨끗한 주거 환경
+              </Typography>
+              을 만들어드립니다!
             </Typography>
             <br />
             <Typography variant="body1">
@@ -115,7 +118,9 @@ const Brand: NextPage = () => {
             <Typography variant="body1">제거하는 청소 서비스입니다.</Typography>
             <br />
             <br />
-            <Typography color="primary" variant="subtitle2">새집증후군, 집 먼지 진드기</Typography>
+            <Typography color="primary" variant="subtitle2">
+              새집증후군, 집 먼지 진드기
+            </Typography>
             <Typography variant="body1">고생하시는 분들이 많습니다.</Typography>
             <Typography variant="body1">
               친환경적인 제품으로 쾌적하고 깨끗한 환경에
@@ -135,13 +140,13 @@ const Brand: NextPage = () => {
         </AspectRatioBox>
       </Box>
       <Box padding={2} paddingBottom={10}>
-          <Typography
-            variant="subtitle1"
-            component={"span"}
-            style={{ borderBottom: `2px solid ${theme.palette.primary.main}` }}
-          >
-            홈클리닝 서비스내용
-          </Typography>
+        <Typography
+          variant="subtitle1"
+          component={"span"}
+          style={{ borderBottom: `2px solid ${theme.palette.primary.main}` }}
+        >
+          홈클리닝 서비스내용
+        </Typography>
         <Box paddingTop={2}>
           <Grid container spacing={8}>
             {contentMap}

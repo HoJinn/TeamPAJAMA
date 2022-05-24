@@ -39,7 +39,7 @@ export default createTheme({
   },
   typography:{
     
-    fontFamily:"noto"
+    fontFamily:"roboto"
   },
   palette: {
     primary:{
@@ -116,7 +116,7 @@ export default createTheme({
             fontFamily:'roboto'
           },
           '&.times': {
-            fontFamily:'times',
+            fontFamily:'roboto',
             letterSpacing:'3px'
           },
       },
@@ -125,7 +125,7 @@ export default createTheme({
         ,[breakpoints.down(SM.max)]:{
           fontSize:pxToRem(12)
         }
-        ,fontFamily:'noto'
+        ,fontFamily:'roboto'
         ,fontWeight:500
         
       },
@@ -135,7 +135,7 @@ export default createTheme({
         ,[breakpoints.down(SM.max)]:{
           fontSize:pxToRem(10)
         }
-        ,fontFamily:'noto'
+        ,fontFamily:'roboto'
         ,fontWeight:500
       },
          
@@ -144,7 +144,7 @@ export default createTheme({
         ,[breakpoints.down(SM.max)]:{
           fontSize:pxToRem(13)
         }
-        ,fontFamily:'noto'
+        ,fontFamily:'roboto'
         ,fontWeight:500 
       },
       subtitle2:{
@@ -152,7 +152,7 @@ export default createTheme({
         ,[breakpoints.down(SM.max)]:{
           fontSize:pxToRem(15)
         }
-        ,fontFamily:'noto'
+        ,fontFamily:'roboto'
         ,fontWeight:500
       },
       subtitle1:{
@@ -160,7 +160,7 @@ export default createTheme({
         ,[breakpoints.down(SM.max)]:{
           fontSize:pxToRem(20)
         }
-        ,fontFamily:'noto'
+        ,fontFamily:'roboto'
         ,fontWeight:500
       },
      
@@ -169,7 +169,7 @@ export default createTheme({
         ,[breakpoints.down(SM.max)]:{
           fontSize:pxToRem(30)
         }
-        ,fontFamily:'noto'
+        ,fontFamily:'roboto'
         ,fontWeight:500
       },
       
@@ -178,12 +178,12 @@ export default createTheme({
         ,[breakpoints.down(SM.max)]:{
           fontSize:pxToRem(46)
         }
-        ,fontFamily:'noto'
+        ,fontFamily:'roboto'
         ,fontWeight:500
       },
       h4:{//pc 메인에서만 사용
         fontSize:pxToRem(60)
-        ,fontFamily:'noto'
+        ,fontFamily:'roboto'
         ,fontWeight:500
       },
     

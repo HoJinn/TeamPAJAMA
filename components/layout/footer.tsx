@@ -159,15 +159,7 @@ const Footer: FC = () => {
                 color="inherit"
                 component={'span'}
               >
-                TEL : 02-000-0000
-              </Typography>
-              <Typography
-                className={classes.text}
-                variant="body1"
-                color="inherit"
-                component={'span'}
-              >
-                FAX : 02-000-0000
+                E-mail : doctorclean0@naver.com
               </Typography>
               <Typography
                 className={classes.text}
@@ -183,7 +175,7 @@ const Footer: FC = () => {
                 color="inherit"
                 component={'span'}
               >
-                통신판매업신고증 제0000-0000-0000호
+                계좌번호 : 기업은행 052-116169-01-013
               </Typography>
             </Box>
           </Box>

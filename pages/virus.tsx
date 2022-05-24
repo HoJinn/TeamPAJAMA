@@ -2,13 +2,13 @@ import { NextPage } from "next";
 import Layout from "components/layout/main";
 import {
   Box,
-  Grid,
   makeStyles,
   Typography,
   useMediaQuery,
   useTheme,
 } from "@material-ui/core";
 import TopImg from "assets/about/virusTop.png";
+import BottomImg from "assets/about/virus_img_bottom.png";
 import HomeImg1 from "assets/about/virus_img1.png";
 import HomeImg2 from "assets/about/virus_img2.png";
 import HomeImg3 from "assets/about/virus_img3.png";
@@ -24,6 +24,7 @@ const useStyles = makeStyles((_theme) => ({
     width: "100%",
   },
 }));
+
 const contentData = [
   {
     title: "코로나19",
@@ -90,7 +91,10 @@ const Brand: NextPage = () => {
           <Box paddingTop={3}>
             <Typography variant="body1">바이러스와 세균을 제거하여 </Typography>
             <Typography variant="body1">
-              안전한 시설을 만들어드립니다!
+              <Typography variant="body1" component={"span"} className="bold">
+                안전한 시설
+              </Typography>
+              을 만들어드립니다!
             </Typography>
             <br />
             <Typography variant="body1">
@@ -137,9 +141,7 @@ const Brand: NextPage = () => {
             바이러스
           </Typography>
         </Box>
-        <Box paddingTop={5}>
-          {contentMap}
-        </Box>
+        <Box paddingTop={5}>{contentMap}</Box>
       </Box>
       <Box padding={2} paddingBottom={10}>
         <Box textAlign={"center"} paddingBottom={5}>
@@ -151,6 +153,16 @@ const Brand: NextPage = () => {
             방역∙소독 서비스 대상
           </Typography>
         </Box>
+        <Box width={'100%'} paddingBottom={3}>
+              <AspectRatioBox width="100%" aspectRatio={0.3}>
+                <Box
+                  width="100%"
+                  height="100%"
+                  className={classes.wrapper}
+                  style={{ backgroundImage: `url(${BottomImg})` }}
+                />
+              </AspectRatioBox>
+            </Box>
         <img width={"100%"} src={Chart} />
       </Box>
     </Layout>

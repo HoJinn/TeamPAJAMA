@@ -101,23 +101,34 @@ const Brand: NextPage = () => {
             오피스크리닝 서비스 안내
           </Typography>
           <Box paddingTop={3}>
-            <Typography variant="body1">사무환경을 개선하여 직장인들의</Typography>
             <Typography variant="body1">
-            업무 효율을 높이는 환경을 만들어드립니다!
-            </Typography>
-            <br />
-            <Typography variant="body1">
-            사무실은 직장인들이 
+              사무환경을 개선하여 직장인들의
             </Typography>
             <Typography variant="body1">
-            가장 오랫동안 생활하는 공간입니다.
+              <Typography variant="body1" component={"span"} className="bold">
+                업무 효율을 높이는 환경
+              </Typography>
+              을 만들어드립니다!
             </Typography>
-            <Typography variant="body1">대체적으로 깨끗해 보이는 사무실은 보이지 않는</Typography>
-            <Typography variant="body1">오염과 세균에 노출되어 있습니다.</Typography>
+            <br />
+            <Typography variant="body1">사무실은 직장인들이</Typography>
+            <Typography variant="body1">
+              가장 오랫동안 생활하는 공간입니다.
+            </Typography>
+            <Typography variant="body1">
+              대체적으로 깨끗해 보이는 사무실은 보이지 않는
+            </Typography>
+            <Typography variant="body1">
+              오염과 세균에 노출되어 있습니다.
+            </Typography>
             <br />
             <br />
-            <Typography color="primary" variant="body1">오염된 업무공간을 개선하고 쾌적한 환경에서</Typography>
-            <Typography variant="body1">업무 효율을 높일 수 있도록 도와드리겠습니다.</Typography>
+            <Typography color="primary" variant="body1">
+              오염된 업무공간을 개선하고 쾌적한 환경에서
+            </Typography>
+            <Typography variant="body1">
+              업무 효율을 높일 수 있도록 도와드리겠습니다.
+            </Typography>
           </Box>
         </Box>
         <AspectRatioBox width="50%" aspectRatio={0.7}>
@@ -130,13 +141,13 @@ const Brand: NextPage = () => {
         </AspectRatioBox>
       </Box>
       <Box padding={2} paddingBottom={10}>
-          <Typography
-            variant="subtitle1"
-            component={"span"}
-            style={{ borderBottom: `2px solid ${theme.palette.primary.main}` }}
-          >
-            오피스크리닝 서비스내용
-          </Typography>
+        <Typography
+          variant="subtitle1"
+          component={"span"}
+          style={{ borderBottom: `2px solid ${theme.palette.primary.main}` }}
+        >
+          오피스크리닝 서비스내용
+        </Typography>
         <Box paddingTop={2}>
           <Grid container spacing={8}>
             {contentMap}

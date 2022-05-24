@@ -101,6 +101,9 @@ console.log(pageName)
                 textAlign="center"
                 paddingBottom={1}
               >
+                                <Typography variant="subtitle2" style={{color:'black'}} component={"span"} className="bold">
+                  (주)
+                </Typography>
                 <Typography variant="subtitle2" color="primary" className="bold" component={"span"}>
                   닥터
                 </Typography>
@@ -112,7 +115,7 @@ console.log(pageName)
           </Box>
           <Box width={"33.33%"} className={classes.headerTel}>
             <img
-              style={{ width: "60px", height: "60px", marginRight: "10px" }}
+              style={{ width: "65px", height: "65px" }}
               src={Tel}
               alt="연락처"
             />
@@ -177,7 +180,7 @@ console.log(pageName)
               onClick={(_) => router.push("/virus")}
               className={classes.btnClass}
             >
-              방역,소독
+              방역∙소독
             </Button>
           </Box>
         </Box>

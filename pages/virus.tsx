@@ -85,7 +85,7 @@ const Brand: NextPage = () => {
             component={"span"}
             style={{ borderBottom: `2px solid ${theme.palette.primary.main}` }}
           >
-            방역소〮독 서비스 안내
+            방역∙소독 서비스 안내
           </Typography>
           <Box paddingTop={3}>
             <Typography variant="body1">바이러스와 세균을 제거하여 </Typography>
@@ -148,7 +148,7 @@ const Brand: NextPage = () => {
             component={"span"}
             style={{ borderBottom: `2px solid ${theme.palette.primary.main}` }}
           >
-            방역소〮독 서비스 대상
+            방역∙소독 서비스 대상
           </Typography>
         </Box>
         <img width={"100%"} src={Chart} />

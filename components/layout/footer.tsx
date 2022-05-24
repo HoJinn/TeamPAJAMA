@@ -96,17 +96,24 @@ const Footer: FC = () => {
         <Box color="white" className={classes.pcShow}>
           <Button
             title="페이지 이동"
-            onClick={(_) => router.push("/notice")}
+            onClick={(_) => router.push("/about")}
             color="inherit"
           >
-            <Typography variant="body1">이용약관</Typography>
+            <Typography variant="body1">회사소개</Typography>
+          </Button>
+          <Button
+            title="페이지 이동"
+            onClick={(_) => router.push("/qna")}
+            color="inherit"
+          >
+            <Typography variant="body1">견적문의</Typography>
           </Button>
           <Button
             title="페이지 이동"
             onClick={(_) => router.push("/brand")}
             color="inherit"
           >
-            <Typography variant="body1">개인정보처리방침</Typography>
+            <Typography variant="body1">시공내역</Typography>
           </Button>
         </Box>
         <Box className={classes.contentsContainer}>
@@ -118,7 +125,7 @@ const Footer: FC = () => {
                 color="inherit"
                 component={'span'}
               >
-                (주)닥터크린
+                (주)닥터크린&nbsp;&nbsp;&nbsp;|
               </Typography>
               <Typography
                 className={classes.text}
@@ -126,7 +133,7 @@ const Footer: FC = () => {
                 color="inherit"
                 component={'span'}
               >
-                위치 : 서울특별시 강서구 공항대로 23로 (우편번호 07619)
+                위치 : 서울특별시 강서구 공항대로 23로 (일화빌딩)&nbsp;&nbsp;&nbsp;|
               </Typography>
               <Typography
                 className={classes.text}
@@ -134,7 +141,15 @@ const Footer: FC = () => {
                 color="inherit"
                 component={'span'}
               >
-                대표자 : 강태복
+                대표자 : 강태복&nbsp;&nbsp;&nbsp; |
+              </Typography>
+              <Typography
+                className={classes.text}
+                variant="body1"
+                color="inherit"
+                component={'span'}
+              >
+                사업자등록번호 527-81-02540
               </Typography>
             </Box>
             <Box paddingTop={1}>

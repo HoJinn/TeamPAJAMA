@@ -14,7 +14,10 @@ const useStyles = makeStyles((theme) => ({
     width:"100%"
   },
 }));
-const Layout: FC = ({ children }) => {
+export type LayoutProps = {
+  qna?:Boolean;
+};
+const Layout: FC<LayoutProps> = ({ children,qna }) => {
   const classes = useStyles();
 
   // const router = useRouter();
@@ -32,17 +35,26 @@ const Layout: FC = ({ children }) => {
       position="relative"
     >
       <Header />
-      <Box style={{backgroundImage:`url(${Banner})`,paddingBottom:'25%'}} className={classes.wrapper}></Box>
-      <Box display={'flex'} justifyContent="space-between">
-        <Box width={'10%'}></Box>
-        <Box width={'80%'} max-width={"1280px"}>
+      {qna ? (
+        <Content>{children}</Content>
+      ) : (
+        <>
+          <Box
+            style={{ backgroundImage: `url(${Banner})`, paddingBottom: "26%" }}
+            className={classes.wrapper}
+          ></Box>
+          <Box display={"flex"} justifyContent="space-between">
+            <Box width={"10%"}></Box>
+            <Box width={"80%"} max-width={"1280px"}>
+              <Content>{children}</Content>
+            </Box>
+            <Box width={"10%"}>
+              <Right />
+            </Box>
+          </Box>
+        </>
+      )}
 
-          <Content>{children}</Content>
-        </Box>
-        <Box width={'10%'}>
-          <Right/>
-        </Box>
-      </Box>
       <Footer />
     </Box>
   );

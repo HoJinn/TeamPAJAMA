@@ -15,7 +15,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 
 
-const useHeaderStyles = makeStyles((theme) => ({
+const useHeaderStyles = makeStyles((_theme) => ({
   header: {
     position: "relative",
     width: "100%",
@@ -27,13 +27,14 @@ const useHeaderStyles = makeStyles((theme) => ({
   },
   headerTel: {
     display: "flex",
+    paddingBottom:'10px'
   },
   btnWrap: {
     display: "flex",
     justifyContent: "space-between"
   },
   btnClass: {
-    fontSize: '16px',
+    fontSize: '25px',
     fontWeight: 600
   },
   // drawer: {
@@ -95,23 +96,35 @@ console.log(pageName)
         <Box className={classes.headerTop}>
           <Box width={"33.33%"} />
           <Box width={"33.33%"} textAlign="center">
-            <a href="/" style={{ lineHeight: 0 }}>
-              <img
-                style={{ width: "200px" }}
-                src={Logo}
-                alt="닥터크린 메인 이동 버튼"
-              />
+            <a href="/" style={{ lineHeight: 0,textDecoration: 'none' }}>
+              <Box
+                textAlign="center"
+                paddingBottom={1}
+              >
+                <Typography variant="subtitle2" color="primary" className="bold" component={"span"}>
+                  닥터
+                </Typography>
+                <Typography variant="subtitle2" style={{color:'black'}} component={"span"} className="bold">
+                  크린
+                </Typography>
+              </Box>
             </a>
           </Box>
           <Box width={"33.33%"} className={classes.headerTel}>
             <img
-              style={{ width: "30px", height: "30px", marginRight: "10px" }}
+              style={{ width: "60px", height: "60px", marginRight: "10px" }}
               src={Tel}
               alt="연락처"
             />
-            <Typography className="bold" style={{ color: "#FE4B00" }}>
+            <Box>
+            <Typography className="bold">
+              고객상담전화
+            </Typography>
+            <Typography className="bold" color='primary'>
               010. 6483. 1286
             </Typography>
+            </Box>
+
           </Box>
         </Box>
         <Box

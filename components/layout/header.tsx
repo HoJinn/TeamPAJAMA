@@ -124,7 +124,7 @@ console.log(pageName)
               고객상담전화
             </Typography>
             <Typography className="bold" color='primary'>
-              010. 6483. 1286
+              010.6483.1286
             </Typography>
             </Box>
 

@@ -43,15 +43,8 @@ const aboutContentMap = aboutContent.map((obj, i) => {
             borderBottom="2px solid #00B7F3"
             component="span"
           >
-            <Typography component="span" variant="subtitle2">
-              (주){" "}
-            </Typography>
-            <Typography component="span" variant="subtitle2" color="primary">
-              {" "}
-              닥터
-            </Typography>
-            <Typography component="span" variant="subtitle2">
-              크린 소개
+            <Typography component="span" variant="subtitle2" className="bold">
+              회사소개
             </Typography>
           </Box>
           <Box textAlign="center" paddingTop={3}>

@@ -65,28 +65,28 @@ export default createTheme({
       root: {
         minWidth: '70px',
         "&:focus":{
-          outline:"solid black"
+          // outline:"solid black"
         }
       },
     },
     MuiButtonBase:{
       root:{
         "&:focus":{
-          outline:"solid black"
+          // outline:"solid black"
         }
       }
     },
     MuiSelect:{
       root:{
         "&:focus":{
-          outline:"solid black"
+          // outline:"solid black"
         }
       }
      },
      MuiCheckbox:{
       root:{
         "&:focus":{
-          outline:"solid black"
+          // outline:"solid black"
         }
       }
      },

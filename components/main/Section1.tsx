@@ -3,9 +3,9 @@ import { FC } from 'react'
 import MainImg1 from 'assets/main_img_1.png'
 import MainImg2 from 'assets/main_img_2.png'
 import MainImg3 from 'assets/main_img_3.png'
-import { Box, Typography, Button, makeStyles,useMediaQuery } from '@material-ui/core'
+import { Box, Typography, Button, makeStyles } from '@material-ui/core'
 import AspectRatioBox from 'components/shape/aspectRatioBox'
-import { LayoutGrade } from 'recoilStates/layout'
+// import { LayoutGrade } from 'recoilStates/layout'
 import theme from 'theme/theme'
 import { useRouter } from 'next/router'
 export type DataProps = {
@@ -39,8 +39,8 @@ const page1Data=[
 ]
 const Section1: FC<DataProps> = () => {
   const classes = useStyles();
-  const router = useRouter();
-  const mobileFlag = useMediaQuery(theme.breakpoints.down(LayoutGrade.MD));
+  // const router = useRouter();
+  // const mobileFlag = useMediaQuery(theme.breakpoints.down(LayoutGrade.MD));
 const contentMap=page1Data.map((obj,i)=>{
   return <Sec1Card data={obj} key={i}/>
 })

@@ -6,7 +6,7 @@ import Content from './content';
 import Footer from './footer';
 import Right from './rightBtn';
 import Banner from 'assets/mainBanner.png';
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((_theme) => ({
   wrapper: {
     backgroundRepeat: 'no-repeat',
     backgroundPosition: "center",

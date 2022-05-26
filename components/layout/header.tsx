@@ -1,8 +1,7 @@
 import { FC, useRef, useState } from "react";
 import useResizeEvent from 'src/hooks/useResizeEvent';
-import Logo from "assets/Logo.png";
 import Tel from "assets/icon/tel.png";
-import { Button, makeStyles, Box, IconButton, SwipeableDrawer, useTheme, useMediaQuery, Typography } from '@material-ui/core';
+import { Button, makeStyles, Box, useTheme, useMediaQuery, Typography } from '@material-ui/core';
 import { useSetRecoilState } from 'recoil';
 import { headerLayoutAsOnlySetter, LayoutGrade } from 'recoilStates/layout';
 // import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
@@ -65,7 +64,7 @@ const Header: FC = () => {
   const classes = useHeaderStyles();
   const headerRef = useRef<HTMLDivElement>(null);
   const setHeaderLayout = useSetRecoilState(headerLayoutAsOnlySetter);
-  const [toggle, setToggle] = useState(false)
+  const [_toggle, setToggle] = useState(false)
   const theme = useTheme();
   const mobileFlag = useMediaQuery(theme.breakpoints.down(LayoutGrade.SM));
   const router =useRouter();

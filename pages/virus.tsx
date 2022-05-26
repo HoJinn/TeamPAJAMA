@@ -4,7 +4,7 @@ import {
   Box,
   makeStyles,
   Typography,
-  useMediaQuery,
+  // useMediaQuery,
   useTheme,
 } from "@material-ui/core";
 import TopImg from "assets/about/virusTop.png";
@@ -13,7 +13,7 @@ import HomeImg1 from "assets/about/virus_img1.png";
 import HomeImg2 from "assets/about/virus_img2.png";
 import HomeImg3 from "assets/about/virus_img3.png";
 import Chart from "assets/about/Chart.png";
-import { LayoutGrade } from "recoilStates/layout";
+// import { LayoutGrade } from "recoilStates/layout";
 import AspectRatioBox from "components/shape/aspectRatioBox";
 
 const useStyles = makeStyles((_theme) => ({
@@ -45,7 +45,7 @@ const contentData = [
 ];
 const Brand: NextPage = () => {
   const theme = useTheme();
-  const mobileFlag = useMediaQuery(theme.breakpoints.down(LayoutGrade.MD));
+  // const mobileFlag = useMediaQuery(theme.breakpoints.down(LayoutGrade.MD));
   const classes = useStyles();
   const contentMap = contentData.map((obj, i) => {
     return (

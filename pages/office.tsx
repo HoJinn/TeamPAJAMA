@@ -5,7 +5,7 @@ import {
   Grid,
   makeStyles,
   Typography,
-  useMediaQuery,
+  // useMediaQuery,
   useTheme,
 } from "@material-ui/core";
 import TopImg from "assets/about/officeTop.png";
@@ -13,7 +13,7 @@ import HomeImg1 from "assets/about/office_img_1.png";
 import HomeImg2 from "assets/about/office_img_2.png";
 import HomeImg3 from "assets/about/office_img_3.png";
 import HomeImg4 from "assets/about/office_img_4.png";
-import { LayoutGrade } from "recoilStates/layout";
+// import { LayoutGrade } from "recoilStates/layout";
 import AspectRatioBox from "components/shape/aspectRatioBox";
 
 const useStyles = makeStyles((_theme) => ({
@@ -60,11 +60,11 @@ const contentData = [
 ];
 const Brand: NextPage = () => {
   const theme = useTheme();
-  const mobileFlag = useMediaQuery(theme.breakpoints.down(LayoutGrade.MD));
+  // const mobileFlag = useMediaQuery(theme.breakpoints.down(LayoutGrade.MD));
   const classes = useStyles();
   const contentMap = contentData.map((obj, i) => {
     return (
-      <Grid item xs={6} style={{ paddingTop: "50px" }}>
+      <Grid item xs={6} key={i} style={{ paddingTop: "50px" }}>
         <Typography variant="subtitle2" style={{paddingBottom:'15px'}}>{obj.title}</Typography>
         <AspectRatioBox width="90%" aspectRatio={0.7}>
           <Box

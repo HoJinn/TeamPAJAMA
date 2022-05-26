@@ -2,15 +2,13 @@ import { NextPage } from "next";
 import Layout from "components/layout/main";
 import {
   Box,
-  Grid,
   makeStyles,
-  Typography,
-  useMediaQuery,
-  useTheme,
+  // useMediaQuery,
+  // useTheme,
 } from "@material-ui/core";
 import Right from 'components/layout/rightBtn';
 
-import { LayoutGrade } from "recoilStates/layout";
+// import { LayoutGrade } from "recoilStates/layout";
 import AspectRatioBox from "components/shape/aspectRatioBox";
 import BackImg from "assets/qna_back_img.png";
 
@@ -24,8 +22,8 @@ const useStyles = makeStyles((_theme) => ({
 }));
 
 const Brand: NextPage = () => {
-  const theme = useTheme();
-  const mobileFlag = useMediaQuery(theme.breakpoints.down(LayoutGrade.MD));
+  // const theme = useTheme();
+  // const mobileFlag = useMediaQuery(theme.breakpoints.down(LayoutGrade.MD));
   const classes = useStyles();
   
   return (

@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+@font-face{
+  font-family: "noto";
+  src:url("https://coopdaon.com/storage/font/woff/NotoSansKR-Black-Hestia.woff") format('woff'),
+      url("https://coopdaon.com/storage/font/ttf/NotoSansKR-Black-Hestia.ttf") format("ttf"),
+      url("https://coopdaon.com/storage/font/otf/NotoSansKR-Black-Hestia.otf") format("otf");
+  font-style:normal;
+  font-weight: 800;
+  
+}
+@font-face{
+  font-family: "noto";
+  src:url("https://coopdaon.com/storage/font/woff/NotoSansKR-Bold-Hestia.woff") format('woff'),
+      url("https://coopdaon.com/storage/font/ttf/NotoSansKR-Bold-Hestia.ttf") format("ttf"),
+      url("https://coopdaon.com/storage/font/otf/NotoSansKR-Bold-Hestia.otf") format("otf");
+  font-style:normal;
+  font-weight: bold;
+}
+@font-face{
+  font-family: "noto";
+  src:url("https://coopdaon.com/storage/font/woff/NotoSansKR-Medium-Hestia.woff") format('woff'),
+      url("https://coopdaon.com/storage/font/ttf/NotoSansKR-Medium-Hestia.ttf") format("ttf"),
+      url("https://coopdaon.com/storage/font/otf/NotoSansKR-Medium-Hestia.otf") format("otf");
+  font-style:normal;
+  font-weight: 500;
+}
+
+@font-face{
+  font-family: "noto";
+  src:url("https://coopdaon.com/storage/font/woff/NotoSansKR-Regular-Hestia.woff") format('woff'),
+      url("https://coopdaon.com/storage/font/ttf/NotoSansKR-Regular-Hestia.ttf") format("ttf"),
+      url("https://coopdaon.com/storage/font/otf/NotoSansKR-Regular-Hestia.otf") format("ttf");
+  font-style:normal;
+  font-weight: 400;
+}
+@font-face{
+  font-family: "noto";
+  src:url("https://coopdaon.com/storage/font/woff/NotoSansKR-Light-Hestia.woff") format('woff'),
+      url("https://coopdaon.com/storage/font/ttf/NotoSansKR-Light-Hestia.ttf") format("ttf"),
+      url("https://coopdaon.com/storage/font/otf/NotoSansKR-Light-Hestia.otf") format("otf");
+  font-style:normal;
+  font-weight: 300;
+}
+@font-face{
+  font-family: "noto";
+  src:url("https://coopdaon.com/storage/font/woff/NotoSansKR-DemiLight-Hestia.woff") format('woff'),
+      url("https://coopdaon.com/storage/font/ttf/NotoSansKR-DemiLight-Hestia.ttf") format("ttf"),
+      url("https://coopdaon.com/storage/font/otf/NotoSansKR-DemiLight-Hestia.otf") format("otf");
+  font-style:normal;
+  font-weight: 100;
+}
+@font-face{
+  font-family: "noto";
+  src:url("https://coopdaon.com/storage/font/woff/NotoSansKR-Thin-Hestia.woff") format('woff'),
+      url("https://coopdaon.com/storage/font/ttf/NotoSansKR-Thin-Hestia.ttf") format("ttf"),
+      url("https://coopdaon.com/storage/font/otf/NotoSansKR-Thin-Hestia.otf") format("otf");
+  font-style:normal;
+  font-weight: 200;
+}
+
+@font-face{
+  font-family: "roboto";
+  src:url("https://coopdaon.com/storage/font/woff/Roboto-Light.woff") format('woff'),
+      url("https://coopdaon.com/storage/font/ttf/Roboto-Light.ttf") format("ttf"),
+      url("https://coopdaon.com/storage/font/otf/Roboto-Light.otf") format("otf");
+  /* src:url("/public/font/roboto/Roboto-Light.woff") format('woff'),
+      url("/public/font/roboto/Roboto-Light.ttf") format("ttf"),
+      url("/public/font/roboto/Roboto-Light.otf") format("otf"); */
+  font-style:normal;
+  font-weight: 300;
+}
+
+@font-face{
+  font-family: "roboto";
+  src:url("https://coopdaon.com/storage/font/woff/Roboto-Regular.woff") format('woff'),
+      url("https://coopdaon.com/storage/font/ttf/Roboto-Regular.ttf") format("ttf"),
+      url("https://coopdaon.com/storage/font/otf/Roboto-Regular.otf") format("otf");
+  /* src:url("/public/font/roboto/Roboto-Regular.woff") format('woff'),
+      url("/public/font/roboto/Roboto-Regular.ttf") format("ttf"),
+      url("/public/font/roboto/Roboto-Regular.otf") format("otf"); */
+  font-style:normal;
+  font-weight: 400;
+}
+
+@font-face{
+  font-family: "roboto";
+  src:url("https://coopdaon.com/storage/font/woff/Roboto-Medium.woff") format('woff'),
+  url("https://coopdaon.com/storage/font/ttf/Roboto-Medium.ttf") format("ttf"),
+  url("https://coopdaon.com/storage/font/otf/Roboto-Medium.otf") format("otf");
+  /* src:url("/public/font/roboto/Roboto-Medium.woff") format('woff'),
+      url("/public/font/roboto/Roboto-Medium.ttf") format("ttf"),
+      url("/public/font/roboto/Roboto-Medium.otf") format("otf"); */
+  font-style:normal;
+  font-weight: 500;
+}
+
+@font-face{
+  font-family: "roboto";
+  src:url("https://coopdaon.com/storage/font/woff/Roboto-Bold.woff") format('woff'),
+  url("https://coopdaon.com/storage/font/ttf/Roboto-Bold.ttf") format("ttf"),
+  url("https://coopdaon.com/storage/font/otf/Roboto-Bold.otf") format("otf");
+  /* src:url("/public/font/roboto/Roboto-Bold.woff") format('woff'),
+      url("/public/font/roboto/Roboto-Bold.ttf") format("ttf"),
+      url("/public/font/roboto/Roboto-Bold.otf") format("otf"); */
+  font-style:normal;
+  font-weight: 600;
+}
+@font-face{
+  font-family: "roboto";
+  src:url("https://coopdaon.com/storage/font/woff/Roboto-Black.woff") format('woff'),
+  url("https://coopdaon.com/storage/font/ttf/Roboto-Black.ttf") format("ttf"),
+  url("https://coopdaon.com/storage/font/otf/Roboto-Black.otf") format("otf");
+  /* src:url("/public/font/roboto/Roboto-Bold.woff") format('woff'),
+      url("/public/font/roboto/Roboto-Bold.ttf") format("ttf"),
+      url("/public/font/roboto/Roboto-Bold.otf") format("otf"); */
+  font-style:normal;
+  font-weight: 700;
+}
+@font-face{
+  font-family: "times";
+  src:url("https://coopdaon.com/storage/font/woff/TimesNewRomanPSMT.woff") format('woff'),
+  url("https://coopdaon.com/storage/font/ttf/times.ttf") format("ttf"),
+  url("https://coopdaon.com/storage/font/otf/TimesNewRomanPSMT.otf") format("otf");
+  /* src:url("/public/font/times/TimesNewRomanPSMT.woff") format('woff'),
+      url("/public/font/times/times.ttf") format("ttf"),
+      url("/public/font/times/TimesNewRomanPSMT.otf") format("otf"); */
+  font-style:normal;
+  font-weight: 300;
+}
+@font-face{
+  font-family: "times";
+  src:url("https://coopdaon.com/storage/font/woff/TimesNewRomanPSMT.woff") format('woff'),
+  url("https://coopdaon.com/storage/font/ttf/times.ttf") format("ttf"),
+  url("https://coopdaon.com/storage/font/otf/TimesNewRomanPSMT.otf") format("otf");
+  /* src:url("/public/font/times/TimesNewRomanPSMT.woff") format('woff'),
+      url("/public/font/times/times.ttf") format("ttf"),
+      url("/public/font/times/TimesNewRomanPSMT.otf") format("otf"); */
+  font-style:normal;
+  font-weight: 400;
+}
+@font-face{
+  font-family: "times";
+  src:url("https://coopdaon.com/storage/font/woff/TimesNewRomanPSMT.woff") format('woff'),
+  url("https://coopdaon.com/storage/font/ttf/times.ttf") format("ttf"),
+  url("https://coopdaon.com/storage/font/otf/TimesNewRomanPSMT.otf") format("otf");
+  /* src:url("/public/font/times/TimesNewRomanPSMT.woff") format('woff'),
+      url("/public/font/times/times.ttf") format("ttf"),
+      url("/public/font/times/TimesNewRomanPSMT.otf") format("otf"); */
+  font-style:normal;
+  font-weight: 500;
+}
+@font-face{
+  font-family: "times";
+  src:url("https://coopdaon.com/storage/font/woff/TimesNewRomanPS-BoldMT.woff") format('woff'),
+  url("https://coopdaon.com/storage/font/ttf/timesbd.ttf") format("ttf"),
+  url("https://coopdaon.com/storage/font/otf/TimesNewRomanPS-BoldMT.otf") format("otf");
+  /* src:url("/public/font/times/TimesNewRomanPS-BoldMT.woff") format('woff'),
+      url("/public/font/times/timesbd.ttf") format("ttf"),
+      url("/public/font/times/TimesNewRomanPS-BoldMT.otf") format("otf"); */
+  font-style:normal;
+  font-weight: 600;
+}
+
+html {
+  font-family: "noto";
+}

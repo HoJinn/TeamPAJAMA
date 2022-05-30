@@ -6,7 +6,7 @@ app.listen(8001, function () {
   console.log('listening on 8001')
 }); 
 
-//(web.js에 추가)
+// (web.js에 추가)
 app.use(express.static(path.join(__dirname, '/doctorclean/out')));
 
 app.get('/', function (요청, 응답) {

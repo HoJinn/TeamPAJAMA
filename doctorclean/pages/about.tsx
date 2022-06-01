@@ -16,7 +16,7 @@ const aboutContent=[
   {title:'주소',content:'서울특별시 강서구 공항대로 23 (우편번호 07619)'},
   {title:'주요사업',content:'건물 위생관리업'},
   {title:'사업자등록번호',content:'527-81-02540'},
-  {title:'이메일',content:'doctorc1ean0@naver.com'},
+  {title:'이메일',content:'doctorclean0@naver.com'},
   {title:'계좌번호',content:'기업은행 052-116169-01-013'}
 ]
 const Index: NextPage = () => {
@@ -27,7 +27,7 @@ const aboutContentMap = aboutContent.map((obj, i) => {
       <Box width="20%">
         <Typography variant="body2">{obj.title}</Typography>
       </Box>
-      <Box width="80%" textAlign="center">
+      <Box width="80%" textAlign="left">
         <Typography variant="body2" style={{ width: "80%" }}>{obj.content}</Typography>
       </Box>
     </Box>
@@ -64,9 +64,8 @@ const aboutContentMap = aboutContent.map((obj, i) => {
             display="flex"
             paddingBottom={1}
           >
-            <Box width="20%"></Box>
-            <Box width="80%" textAlign="center">
-              <Typography style={{ width: "80%" }}>개요</Typography>
+            <Box width="100%" textAlign="center">
+              <Typography style={{ width: "100%" }}>개요</Typography>
             </Box>
           </Box>
           {aboutContentMap}

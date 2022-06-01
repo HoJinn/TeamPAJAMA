@@ -83,7 +83,7 @@ const Brand: NextPage = () => {
         <Box width={"70%"}>
           <Typography
             variant="subtitle1"
-            component={"span"}
+            component={"span"} className="bold"
             style={{ borderBottom: `2px solid ${theme.palette.primary.main}` }}
           >
             방역∙소독 서비스 안내
@@ -127,7 +127,7 @@ const Brand: NextPage = () => {
         <Box textAlign={"center"}>
           <Typography
             variant="subtitle1"
-            component={"span"}
+            component={"span"} className="bold"
             style={{ borderBottom: `2px solid ${theme.palette.primary.main}` }}
           >
             주요 발생 &nbsp;
@@ -135,7 +135,7 @@ const Brand: NextPage = () => {
           <Typography
             color="primary"
             variant="subtitle1"
-            component={"span"}
+            component={"span"} className="bold"
             style={{ borderBottom: `2px solid ${theme.palette.primary.main}` }}
           >
             바이러스
@@ -147,7 +147,7 @@ const Brand: NextPage = () => {
         <Box textAlign={"center"} paddingBottom={5}>
           <Typography
             variant="subtitle1"
-            component={"span"}
+            component={"span"} className="bold"
             style={{ borderBottom: `2px solid ${theme.palette.primary.main}` }}
           >
             방역∙소독 서비스 대상

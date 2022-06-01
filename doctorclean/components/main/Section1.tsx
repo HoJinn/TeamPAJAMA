@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
 const page1Data=[
   {title:'홈크리닝',subTitle:'Home Cleaning',link:'/home',img:MainImg1,content1:'집 위생상태',content2:'가',content3:'걱정되는 고객님도'},
   {title:'오피스크리닝',subTitle:'Office Cleaning',link:'/office',img:MainImg2,content1:'개업을 앞둔',content2:'',content3:'고객님도'},
-  {title:'방역.소독',subTitle:'Disinfection Cleaning',link:'/virus',img:MainImg3,content1:'바이러스로 인한 방역',content2:'이',content3:'필요한 고객님도'}
+  {title:'방역∙소독',subTitle:'Disinfection Cleaning',link:'/virus',img:MainImg3,content1:'바이러스로 인한 방역',content2:'이',content3:'필요한 고객님도'}
 ]
 const Section1: FC<DataProps> = () => {
   const classes = useStyles();

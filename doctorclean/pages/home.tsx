@@ -65,7 +65,7 @@ const Brand: NextPage = () => {
   const contentMap = contentData.map((obj, i) => {
     return (
       <Grid key={i} item xs={6} style={{ paddingTop: "50px" }}>
-        <Typography variant="subtitle2" style={{paddingBottom:'15px'}}>{obj.title}</Typography>
+        <Typography variant="subtitle2" className="bold" style={{paddingBottom:'15px'}}>{obj.title}</Typography>
         <AspectRatioBox width="90%" aspectRatio={0.7}>
           <Box
             width="100%"
@@ -95,6 +95,7 @@ const Brand: NextPage = () => {
         <Box width={"50%"}>
           <Typography
             variant="subtitle1"
+            className="bold"
             component={"span"}
             style={{ borderBottom: `2px solid ${theme.palette.primary.main}` }}
           >
@@ -142,7 +143,7 @@ const Brand: NextPage = () => {
       <Box padding={2} paddingBottom={10}>
         <Typography
           variant="subtitle1"
-          component={"span"}
+          component={"span"} className="bold"
           style={{ borderBottom: `2px solid ${theme.palette.primary.main}` }}
         >
           홈클리닝 서비스내용

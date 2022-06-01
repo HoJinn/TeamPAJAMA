@@ -123,9 +123,14 @@ const Brand: NextPage = () => {
             </Typography>
             <br />
             <br />
-            <Typography color="primary" variant="body1" className="bold">
-              오염된 업무공간을 개선하고 쾌적한 환경에서
+            <Box>
+            <Typography component='span' color="primary" variant="body1" className="bold">
+              오염된 업무공간을 개선하고 쾌적한 환경
             </Typography>
+            <Typography component='span' variant="body1">
+              에서
+            </Typography>
+            </Box>
             <Typography variant="body1">
               업무 효율을 높일 수 있도록 도와드리겠습니다.
             </Typography>
@@ -146,7 +151,7 @@ const Brand: NextPage = () => {
           component={"span"} className="bold"
           style={{ borderBottom: `2px solid ${theme.palette.primary.main}` }}
         >
-          오피스크리닝 서비스내용
+          오피스크리닝 서비스 내용
         </Typography>
         <Box paddingTop={2}>
           <Grid container spacing={8}>

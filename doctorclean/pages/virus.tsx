@@ -62,7 +62,7 @@ const Brand: NextPage = () => {
             </Box>
             <Box width={'90%'}>
               <Box paddingX={5}>
-              <Typography>{obj.title}</Typography>
+              <Typography className="bold">{obj.title}</Typography>
               <Typography style={{whiteSpace: 'pre-wrap'}} variant="body2">
                 {obj.content}
               </Typography>
@@ -108,7 +108,7 @@ const Brand: NextPage = () => {
             </Typography>
             <br />
             <br />
-            <Typography color="primary" variant="body1">
+            <Typography color="primary" variant="body1" className="bold">
               전염성 질환으로 위생과 방역에 대한 중요성이 높아지고 있어
             </Typography>
             <Typography variant="body1">

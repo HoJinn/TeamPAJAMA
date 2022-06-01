@@ -123,7 +123,7 @@ const Brand: NextPage = () => {
             </Typography>
             <br />
             <br />
-            <Typography color="primary" variant="body1">
+            <Typography color="primary" variant="body1" className="bold">
               오염된 업무공간을 개선하고 쾌적한 환경에서
             </Typography>
             <Typography variant="body1">

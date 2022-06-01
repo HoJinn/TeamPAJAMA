@@ -24,11 +24,11 @@ const Index: NextPage = () => {
 const aboutContentMap = aboutContent.map((obj, i) => {
   return (
     <Box  key={i} borderBottom="2px solid #C4C4C4" display="flex" padding='20px 50px'>
-      <Box width="20%">
+      <Box width="20%" textAlign="center">
         <Typography variant="body2">{obj.title}</Typography>
       </Box>
       <Box width="80%" textAlign="left">
-        <Typography variant="body2" style={{ width: "80%" }}>{obj.content}</Typography>
+        <Typography variant="body2" style={{ width: "80%",paddingLeft:'5%' }}>{obj.content}</Typography>
       </Box>
     </Box>
   );

@@ -119,7 +119,7 @@ const Brand: NextPage = () => {
             <Typography variant="body1">제거하는 청소 서비스입니다.</Typography>
             <br />
             <br />
-            <Typography color="primary" variant="subtitle2">
+            <Typography color="primary" variant="subtitle2" className="bold">
               새집증후군, 집 먼지 진드기
             </Typography>
             <Typography variant="body1">고생하시는 분들이 많습니다.</Typography>

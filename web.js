@@ -13,7 +13,7 @@ app.get('/', function (요청, 응답) {
   응답.sendFile(path.join(__dirname, '/doctorclean/out/index.html'));
 });
 
-// web 페이지접근허용
+//// web 페이지접근허용
 app.get('*', function (요청, 응답) {
     응답.sendFile(path.join(__dirname, '/doctorclean/out/index.html'));
   });

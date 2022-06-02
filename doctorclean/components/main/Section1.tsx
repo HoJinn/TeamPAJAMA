@@ -156,14 +156,14 @@ const Sec1Card: FC<Section1Props> = ({data}) => {
       </AspectRatioBox>
       <Box paddingTop={2} textAlign={"center"}>
         <Box>
-          <Typography variant='body1' className="bold" color="primary" component="span">
+          <Typography variant='subtitle2' className="bold" color="primary" component="span">
             {data.content1}
           </Typography>
-          <Typography variant='body1' className="bold" component="span">
+          <Typography variant='subtitle2' className="bold" component="span">
             {data.content2}
           </Typography>
         </Box>
-        <Typography variant='body1' className="bold" component="span">
+        <Typography variant='subtitle2' className="bold" component="span">
           {data.content3}
         </Typography>
         <Box paddingTop={1}>

@@ -59,7 +59,7 @@ const MyApp = (props: AppProps<CommProps>) => {
       <Head>
         <title>닥터크린</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
-        <meta name="닥터크린" content="청소 업체 고수들이 모인 곳! 닥터크린!" />
+        <meta name="description" content="청소 업체 고수들이 모인 곳! 닥터크린!" />
         <meta property="og:type" content="website"/> 
         <meta property="og:title" content="닥터크린"/>
         <meta property="og:description" content="청소 업체 고수들이 모인 곳! 닥터크린!"/>

@@ -59,6 +59,12 @@ const MyApp = (props: AppProps<CommProps>) => {
       <Head>
         <title>닥터크린</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+        <meta name="닥터크린" content="청소 업체 고수들이 모인 곳! 닥터크린!" />
+        <meta property="og:type" content="website"/> 
+        <meta property="og:title" content="닥터크린"/>
+        <meta property="og:description" content="청소 업체 고수들이 모인 곳! 닥터크린!"/>
+        {/* <meta property="og:image" content="http://www.mysite.com/myimage.jpg"/> */}
+        <meta property="og:url" content="http://www.닥터크린.com"/>
       <link rel="icon" href={Favicon} type="image/x-icon"></link>
         {/* 네이버 웹마스터*/}
         {/* <meta name="naver-site-verification" content="2de2bb353d63049a393b4e7a91f388eb76c9ed83" /> */}

@@ -171,11 +171,13 @@ const Sec1Card: FC<Section1Props> = ({data}) => {
             style={{
               borderBottom: "1px solid #000",
               padding: 0,
-              borderRadius: 0,
+              borderRadius: 0
             }}
             onClick={()=>pageMove(data.link)}
           >
+            <Typography className='bold'>
             자세히보기
+            </Typography>
           </Button>
         </Box>
       </Box>

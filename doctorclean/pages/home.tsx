@@ -146,7 +146,7 @@ const Brand: NextPage = () => {
           component={"span"} className="bold"
           style={{ borderBottom: `2px solid ${theme.palette.primary.main}` }}
         >
-          홈클리닝 서비스
+          홈클리닝 서비스 내용
         </Typography>
         <Box paddingTop={2}>
           <Grid container spacing={8}>

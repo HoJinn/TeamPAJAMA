@@ -13,7 +13,7 @@ import HomeImg1 from "assets/about/virus_img1.png";
 import HomeImg2 from "assets/about/virus_img2.png";
 import HomeImg3 from "assets/about/virus_img3.png";
 import Chart from "assets/about/Chart.png";
-import ChartMo from "assets/about/moChart.png";
+import ChartMo from "assets/about/moChart.jpg";
 // import { LayoutGrade } from "recoilStates/layout";
 import AspectRatioBox from "components/shape/aspectRatioBox";
 import { LayoutGrade, windowLayoutSelector } from "recoilStates/layout";

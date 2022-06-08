@@ -54,6 +54,12 @@ const useStyles = makeStyles(theme => ({
       marginBottom: theme.spacing(2),
     }
   },
+  gridWrap: {
+    display:'none',
+    [theme.breakpoints.down(LayoutGrade.SM)]: {
+      display:'block'
+    }
+  },
   copyright: {
     color: "white",
     fontWeight: 200
@@ -153,7 +159,9 @@ const Footer: FC = () => {
   });
   return (
     <div id="footer" className={classes.footer}>
+      <Box className={classes.gridWrap}>
       <Grid container>{contentMap}</Grid>
+      </Box>
       <Box
         maxWidth="1280px"
         className={classes.container}

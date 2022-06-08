@@ -53,8 +53,7 @@ const aboutContentMap = aboutContent.map((obj, i) => {
               사람과 환경을 생각하며,
             </Typography>
             <Typography variant="body1">
-              고객분들의 공간이 더 가치가 있도록 만들기 위한 최선의 노력을
-              제공하고 있습니다.
+              고객분들의 공간을 더 가치 있게 하기 위한 최선의 노력을 제공하고 있습니다.
             </Typography>
           </Box>
         </Box>

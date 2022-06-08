@@ -1,7 +1,7 @@
 import { FC, useRef, useState } from "react";
 import useResizeEvent from 'src/hooks/useResizeEvent';
 import Tel from "assets/icon/tel.png";
-import { Button, makeStyles, Box, useTheme, useMediaQuery, Typography } from '@material-ui/core';
+import { Button, makeStyles, Box, useTheme, useMediaQuery, Typography, IconButton, SwipeableDrawer } from '@material-ui/core';
 import { useSetRecoilState } from 'recoil';
 import { headerLayoutAsOnlySetter, LayoutGrade } from 'recoilStates/layout';
 // import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
@@ -9,12 +9,13 @@ import { headerLayoutAsOnlySetter, LayoutGrade } from 'recoilStates/layout';
 // import MenuList from './menuList'
 // import Une from 'assets/SNS/uneIcon.png';
 // import { parse } from "src/HtmlParser";
-// import MenuIcon from '@material-ui/icons/Menu';
+import MenuIcon from '@material-ui/icons/Menu';
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import MenuList from "./menuList";
 
 
-const useHeaderStyles = makeStyles((_theme) => ({
+const useHeaderStyles = makeStyles((theme) => ({
   header: {
     position: "relative",
     width: "100%",
@@ -36,40 +37,40 @@ const useHeaderStyles = makeStyles((_theme) => ({
     fontSize: '25px',
     fontWeight: 600
   },
-  // drawer: {
-  //   width: '100%',
-  //   flexShrink: 0,
-  // },
-  // drawerPaper: {
-  //   // backgroundColor: 'rgba(34,34,34,.9)',
-  //   color: 'black',
-  //   backgroundColor: 'white',
-  //   width: `calc(100% - 40px)`
-  // },
-  // pcHeader: {
-  //   display: "flex",
-  //   [theme.breakpoints.down(LayoutGrade.SM)]: {
-  //     display: "none",
-  //   }
-  // },
-  // mobileHeader: {
-  //   display: "none",
-  //   [theme.breakpoints.down(LayoutGrade.SM)]: {
-  //     display: "flex",
-  //   }
-  // },
+  drawer: {
+    width: '100%',
+    flexShrink: 0,
+  },
+  drawerPaper: {
+    // backgroundColor: 'rgba(34,34,34,.9)',
+    color: 'black',
+    backgroundColor: 'white',
+    width: `calc(100% - 40px)`
+  },
+  pcHeader: {
+    display: "block",
+    [theme.breakpoints.down(LayoutGrade.SM)]: {
+      display: "none",
+    }
+  },
+  mobileHeader: {
+    display: "none",
+    borderBottom:"3px solid #00B7F3",
+    [theme.breakpoints.down(LayoutGrade.SM)]: {
+      display: "flex",
+    }
+  },
 }));
 
 const Header: FC = () => {
   const classes = useHeaderStyles();
   const headerRef = useRef<HTMLDivElement>(null);
   const setHeaderLayout = useSetRecoilState(headerLayoutAsOnlySetter);
-  const [_toggle, setToggle] = useState(false)
+  const [toggle, setToggle] = useState(false)
   const theme = useTheme();
   const mobileFlag = useMediaQuery(theme.breakpoints.down(LayoutGrade.SM));
   const router =useRouter();
 const pageName=router.asPath
-console.log(pageName)
   useEffect(() => {
     if (!mobileFlag) setToggle(false)
   }, [mobileFlag])
@@ -82,16 +83,16 @@ console.log(pageName)
   )
 
 
-  // const setToggleFn = () => {
-  //   setToggle(!toggle)
-  // }
-  // const movePage=(link:string)=>{
-  //   router.push({pathname:link})
-  // }
+  const setToggleFn = () => {
+    setToggle(!toggle)
+  }
+  const movePage=(link:string)=>{
+    router.push({pathname:link})
+  }
 
   return (
     <div id="header" className={classes.header} ref={headerRef}>
-      <Box paddingY={1}>
+      <Box className={classes.pcHeader} paddingY={1}>
         <Box className={classes.headerTop}>
           <Box width={"33.33%"} />
           <Box width={"33.33%"} textAlign="center">
@@ -185,60 +186,27 @@ console.log(pageName)
         </Box>
       </Box>
 
-      {/* <Box
-        className={classes.pcHeader}
-        paddingX={5}
-        paddingY={2}
-        alignItems="center"
-      >
-        <Box width="33%">
-          <Button
-            title="페이지 이동"
-            onClick={(_) => router.push("/brand")}
-            className={classes.btnClass}
-          >
-            브랜드 소개
-          </Button>
-          <Button
-            title="페이지 이동"
-            onClick={(_) => router.push("/recipes")}
-            className={classes.btnClass}
-          >
-            레시피
-          </Button>
-          <Button
-            title="페이지 이동"
-            onClick={(_) => router.push("/notice")}
-            className={classes.btnClass}
-          >
-            공지사항
-          </Button>
-        </Box>
-        <Box flexGrow={1} textAlign="center">
-          <a href="/" style={{ lineHeight: 0 }}>
-            <img src={Logo} alt="다온븟 로고 메인 이동 버튼" />
-          </a>
-        </Box>
-        <Box width="33%" textAlign="right">
-          <Button
-            title="새 창 열기"
-            onClick={(_) => alert("준비중입니다.")}
-            className={classes.btnClass}
-          >
-            <ShoppingCartOutlinedIcon />
-            쇼핑몰
-          </Button>
-        </Box>
-      </Box>
-
       <Box className={classes.mobileHeader} justifyContent="space-between">
-        <Box>
-          <IconButton title="메인 이동 버튼" onClick={(_) => movePage("/")}>
-            <img height="22.5px" src={Logo} alt="다온븟 로고" />
-          </IconButton>
+        <Box/>
+      <Box>
+          <Button title="메인 이동 버튼" onClick={(_) => movePage("/")}>
+              <Box
+                textAlign="center"
+              >
+                                <Typography variant="subtitle2" style={{color:'black'}} component={"span"} className="bold">
+                  (주)
+                </Typography>
+                <Typography variant="subtitle2" color="primary" className="bold" component={"span"}>
+                  닥터
+                </Typography>
+                <Typography variant="subtitle2" style={{color:'black'}} component={"span"} className="bold">
+                  크린
+                </Typography>
+              </Box>
+          </Button>
         </Box>
         <IconButton title="메뉴" size="small" onClick={setToggleFn}>
-          <MenuIcon />
+          <MenuIcon/>
         </IconButton>
         <SwipeableDrawer
           anchor="right"
@@ -251,7 +219,7 @@ console.log(pageName)
         >
           <MenuList toggleMenu={setToggleFn} />
         </SwipeableDrawer>
-      </Box> */}
+      </Box> 
     </div>
   );
 }

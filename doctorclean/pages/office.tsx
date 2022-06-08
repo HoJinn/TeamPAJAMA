@@ -15,13 +15,28 @@ import HomeImg3 from "assets/about/office_img_3.png";
 import HomeImg4 from "assets/about/office_img_4.png";
 // import { LayoutGrade } from "recoilStates/layout";
 import AspectRatioBox from "components/shape/aspectRatioBox";
+import { LayoutGrade, windowLayoutSelector } from "recoilStates/layout";
+import { useRecoilValue } from "recoil";
 
-const useStyles = makeStyles((_theme) => ({
+const useStyles = makeStyles((theme) => ({
   wrapper: {
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     backgroundSize: "cover",
     width: "100%",
+  },
+  TopTextWrap: {
+    width:"50%",
+    [theme.breakpoints.down(LayoutGrade.SM)]: {
+      width:"100%",
+      paddingBottom:theme.spacing(5)
+    }
+  },
+  TopImgWrap: {
+    width:"50%",
+    [theme.breakpoints.down(LayoutGrade.SM)]: {
+      display:'none'
+    }
   },
 }));
 const contentData = [
@@ -62,11 +77,14 @@ const Brand: NextPage = () => {
   const theme = useTheme();
   // const mobileFlag = useMediaQuery(theme.breakpoints.down(LayoutGrade.MD));
   const classes = useStyles();
+  const size = useRecoilValue(windowLayoutSelector)
+  const titleSize = size.grade === 'xl' ? 6 : 12
+  const imgSize = size.grade === 'xl' ? "90%" : "100%"
   const contentMap = contentData.map((obj, i) => {
     return (
-      <Grid item xs={6} key={i} style={{ paddingTop: "50px" }}>
+      <Grid item xs={titleSize} key={i} style={{ paddingTop: "50px" }}>
         <Typography variant="subtitle2" style={{paddingBottom:'15px'}} className="bold">{obj.title}</Typography>
-        <AspectRatioBox width="90%" aspectRatio={0.7}>
+        <AspectRatioBox width={imgSize} aspectRatio={0.7}>
           <Box
             width="100%"
             height="100%"
@@ -92,7 +110,7 @@ const Brand: NextPage = () => {
         display="flex"
         justifyContent="space-between"
       >
-        <Box width={"50%"}>
+        <Box className={classes.TopTextWrap}>
           <Typography
             variant="subtitle1" className="bold"
             component={"span"}
@@ -136,7 +154,8 @@ const Brand: NextPage = () => {
             </Typography>
           </Box>
         </Box>
-        <AspectRatioBox width="50%" aspectRatio={0.7}>
+        <Box className={classes.TopImgWrap}>
+        <AspectRatioBox width="100%" aspectRatio={0.7}>
           <Box
             width="100%"
             height="100%"
@@ -144,6 +163,7 @@ const Brand: NextPage = () => {
             style={{ backgroundImage: `url(${TopImg})` }}
           />
         </AspectRatioBox>
+        </Box>
       </Box>
       <Box padding={2} paddingBottom={10}>
         <Typography

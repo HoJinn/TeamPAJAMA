@@ -13,15 +13,44 @@ import HomeImg1 from "assets/about/virus_img1.png";
 import HomeImg2 from "assets/about/virus_img2.png";
 import HomeImg3 from "assets/about/virus_img3.png";
 import Chart from "assets/about/Chart.png";
+import ChartMo from "assets/about/moChart.jpg";
 // import { LayoutGrade } from "recoilStates/layout";
 import AspectRatioBox from "components/shape/aspectRatioBox";
+import { LayoutGrade, windowLayoutSelector } from "recoilStates/layout";
+import { useRecoilValue } from "recoil";
 
-const useStyles = makeStyles((_theme) => ({
+const useStyles = makeStyles((theme) => ({
   wrapper: {
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     backgroundSize: "cover",
     width: "100%",
+  },
+  TopTextWrap: {
+    width:"70%",
+    [theme.breakpoints.down(LayoutGrade.SM)]: {
+      width:"100%",
+      paddingBottom:theme.spacing(5)
+    }
+  },
+  TopImgWrap: {
+    width:"40%",
+    [theme.breakpoints.down(LayoutGrade.SM)]: {
+      display:'none'
+    }
+  },
+  mapTextWrap: {
+    width:"10%",
+    [theme.breakpoints.down(LayoutGrade.SM)]: {
+      display:'none'
+    }
+  },
+  mapImgWrap: {
+    width:"90%",
+    [theme.breakpoints.down(LayoutGrade.SM)]: {
+      width:"100%",
+      paddingBottom:theme.spacing(5)
+    }
   },
 }));
 
@@ -47,10 +76,13 @@ const Brand: NextPage = () => {
   const theme = useTheme();
   // const mobileFlag = useMediaQuery(theme.breakpoints.down(LayoutGrade.MD));
   const classes = useStyles();
+  const size = useRecoilValue(windowLayoutSelector)
+  const chartImg = size.grade === 'xl' ? Chart : ChartMo
+  const pSize = size.grade === 'xl' ? 5 : 0
   const contentMap = contentData.map((obj, i) => {
     return (
       <Box key={i} display={'flex'} padding={1} justifyContent='space-between'>
-            <Box width={'10%'}>
+            <Box className={classes.mapTextWrap}>
               <AspectRatioBox width="100%" aspectRatio={1}>
                 <Box
                   width="100%"
@@ -60,8 +92,8 @@ const Brand: NextPage = () => {
                 />
               </AspectRatioBox>
             </Box>
-            <Box width={'90%'}>
-              <Box paddingX={5}>
+            <Box className={classes.mapImgWrap}>
+              <Box paddingX={pSize}>
               <Typography className="bold">{obj.title}</Typography>
               <Typography style={{whiteSpace: 'pre-wrap'}} variant="body2">
                 {obj.content}
@@ -80,10 +112,11 @@ const Brand: NextPage = () => {
         display="flex"
         justifyContent="space-between"
       >
-        <Box width={"70%"}>
+        <Box className={classes.TopTextWrap}>
           <Typography
             variant="subtitle1"
-            component={"span"} className="bold"
+            component={"span"}
+            className="bold"
             style={{ borderBottom: `2px solid ${theme.palette.primary.main}` }}
           >
             방역∙소독 서비스 안내
@@ -119,15 +152,21 @@ const Brand: NextPage = () => {
             </Typography>
           </Box>
         </Box>
-        <AspectRatioBox width="40%" aspectRatio={1}>
+        <Box className={classes.TopImgWrap}>
+          <AspectRatioBox width="100%" aspectRatio={1}>
+            <img height={"100%"} src={TopImg} />
+          </AspectRatioBox>
+        </Box>
+        {/* <AspectRatioBox width="40%" aspectRatio={1}>
           <img height={"100%"} src={TopImg} />
-        </AspectRatioBox>
+        </AspectRatioBox> */}
       </Box>
       <Box padding={2} paddingBottom={10}>
         <Box textAlign={"center"}>
           <Typography
             variant="subtitle1"
-            component={"span"} className="bold"
+            component={"span"}
+            className="bold"
             style={{ borderBottom: `2px solid ${theme.palette.primary.main}` }}
           >
             주요 발생 &nbsp;
@@ -135,7 +174,8 @@ const Brand: NextPage = () => {
           <Typography
             color="primary"
             variant="subtitle1"
-            component={"span"} className="bold"
+            component={"span"}
+            className="bold"
             style={{ borderBottom: `2px solid ${theme.palette.primary.main}` }}
           >
             바이러스
@@ -147,23 +187,24 @@ const Brand: NextPage = () => {
         <Box textAlign={"center"} paddingBottom={5}>
           <Typography
             variant="subtitle1"
-            component={"span"} className="bold"
+            component={"span"}
+            className="bold"
             style={{ borderBottom: `2px solid ${theme.palette.primary.main}` }}
           >
             방역∙소독 서비스 대상
           </Typography>
         </Box>
-        <Box width={'100%'} paddingBottom={3}>
-              <AspectRatioBox width="100%" aspectRatio={0.3}>
-                <Box
-                  width="100%"
-                  height="100%"
-                  className={classes.wrapper}
-                  style={{ backgroundImage: `url(${BottomImg})` }}
-                />
-              </AspectRatioBox>
-            </Box>
-        <img width={"100%"} src={Chart} />
+        <Box width={"100%"} paddingBottom={3}>
+          <AspectRatioBox width="100%" aspectRatio={0.3}>
+            <Box
+              width="100%"
+              height="100%"
+              className={classes.wrapper}
+              style={{ backgroundImage: `url(${BottomImg})` }}
+            />
+          </AspectRatioBox>
+        </Box>
+        <img width={"100%"} src={chartImg} />
       </Box>
     </Layout>
   );

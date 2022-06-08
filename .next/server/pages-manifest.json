@@ -1,0 +1,13 @@
+{
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/about": "pages/about.js",
+  "/api/[social]": "pages/api/[social].js",
+  "/api/unlink/[social]": "pages/api/unlink/[social].js",
+  "/home": "pages/home.js",
+  "/": "pages/index.js",
+  "/office": "pages/office.js",
+  "/qna": "pages/qna.js",
+  "/virus": "pages/virus.js",
+  "/_error": "pages/_error.js"
+}

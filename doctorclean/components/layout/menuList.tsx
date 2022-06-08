@@ -15,20 +15,20 @@ const MenuList: FC<defaultProps> = ({ toggleMenu }) => {
           <Close />
         </IconButton>
       </Box>
-      <ListItem button onClick={() => router.push("/notice")}>
-        <ListItemText primary="공지사항" />
+      <ListItem button onClick={() => router.push("/about")}>
+        <ListItemText primary="회사 소개" />
       </ListItem>
 
-      <ListItem button onClick={() => router.push("/brand")}>
-        <ListItemText primary="브랜드 소개" />
+      <ListItem button onClick={() => router.push("/home")}>
+        <ListItemText primary="홈클리닝" />
       </ListItem>
 
-      <ListItem button onClick={() => router.push("/recipes")}>
-        <ListItemText primary="레시피" />
+      <ListItem button onClick={() => router.push("/office")}>
+        <ListItemText primary="오피스클리닝" />
       </ListItem>
 
-      <ListItem button onClick={_=>alert("준비중입니다.")}>
-        <ListItemText primary="쇼핑몰" />
+      <ListItem button onClick={() => router.push("/virus")}>
+        <ListItemText primary="방역∙소독" />
       </ListItem>
     </List>
 

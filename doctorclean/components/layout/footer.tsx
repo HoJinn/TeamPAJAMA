@@ -1,8 +1,11 @@
-import { makeStyles, Box, Typography, Button } from "@material-ui/core";
+import { makeStyles, Box, Typography, Button, Grid } from "@material-ui/core";
 import { useRouter } from "next/dist/client/router";
 import { FC } from "react";
 // import {useTheme } from "@material-ui/core";
-
+import Phone from 'assets/icon/phone.png';
+import Talk from 'assets/icon/talk.png';
+import Blog from 'assets/icon/blog.png';
+import Insta from 'assets/icon/insta.png';
 import { LayoutGrade } from 'recoilStates/layout';
 
 const useStyles = makeStyles(theme => ({
@@ -51,6 +54,12 @@ const useStyles = makeStyles(theme => ({
       marginBottom: theme.spacing(2),
     }
   },
+  gridWrap: {
+    display:'none',
+    [theme.breakpoints.down(LayoutGrade.SM)]: {
+      display:'block'
+    }
+  },
   copyright: {
     color: "white",
     fontWeight: 200
@@ -78,15 +87,81 @@ const useStyles = makeStyles(theme => ({
     "&:focus":{
       outline:'3px solid black',
     }
+  },
+  footerBtn:{
+    display:'flex',
+    justifyContent:'center',
+    alignItems:'center'
   }
 
 }));
-
+const contentData = [
+  {
+    title: "고객센터연결",
+    img: Phone,
+    color: "#8CD7F0",
+    link:'010-6483-1286'
+  },
+  {
+    title: "카카오톡상담",
+    img: Talk,
+    color: "#FFE921",
+    link:'http://pf.kakao.com/_Qpptb'
+  },
+  {
+    title: "네이버블로그",
+    img: Blog,
+    color: "#76FB5F",
+    link:'https://blog.naver.com/doctorclean0'
+  },
+  {
+    title: "인스타그램",
+    img: Insta,
+    color: "#FF54A2",
+    link:'https://www.instagram.com/doctorclean0/'
+  },
+  
+];
 const Footer: FC = () => {
   const classes = useStyles();
   const router = useRouter();
+  const handleClickFn = (e: string) => {
+      router.push(e);
+  };
+  const contentMap = contentData.map((obj, i) => {
+    return (
+      <Grid
+        item
+        xs={6}
+        key={i}
+        className={classes.footerBtn}
+        style={{ backgroundColor: `${obj.color}` }}
+      >
+        {obj.link==="010-6483-1286"?<Button href="tel:01064831286" style={{ width: "100%" }}>
+          <img src={obj.img} height="20px" />
+          <Typography
+            className="bold"
+            style={{ color: "#000", paddingLeft: "3px" }}
+          >
+            {obj.title}
+          </Typography>
+        </Button>:<Button onClick={()=>handleClickFn(obj.link)} style={{ width: "100%" }}>
+          <img src={obj.img} height="20px" />
+          <Typography
+            className="bold"
+            style={{ color: "#000", paddingLeft: "3px" }}
+          >
+            {obj.title}
+          </Typography>
+        </Button>}
+      </Grid>
+    );
+  });
   return (
     <div id="footer" className={classes.footer}>
+      <Box className={classes.gridWrap}>
+      <Grid container>{contentMap}</Grid>
+      </Box>
       <Box
         maxWidth="1280px"
         className={classes.container}
@@ -123,7 +198,7 @@ const Footer: FC = () => {
                 className={classes.text}
                 variant="body1"
                 color="inherit"
-                component={'span'}
+                component={"span"}
               >
                 (주)닥터크린&nbsp;&nbsp;&nbsp;|
               </Typography>
@@ -131,15 +206,16 @@ const Footer: FC = () => {
                 className={classes.text}
                 variant="body1"
                 color="inherit"
-                component={'span'}
+                component={"span"}
               >
-                위치 : 서울특별시 강서구 공항대로 23로 (일화빌딩)&nbsp;&nbsp;&nbsp;|
+                위치 : 서울특별시 강서구 공항대로 23로
+                (일화빌딩)&nbsp;&nbsp;&nbsp;|
               </Typography>
               <Typography
                 className={classes.text}
                 variant="body1"
                 color="inherit"
-                component={'span'}
+                component={"span"}
               >
                 대표자 : 강태복&nbsp;&nbsp;&nbsp; |
               </Typography>
@@ -147,7 +223,7 @@ const Footer: FC = () => {
                 className={classes.text}
                 variant="body1"
                 color="inherit"
-                component={'span'}
+                component={"span"}
               >
                 사업자등록번호 527-81-02540
               </Typography>
@@ -157,7 +233,7 @@ const Footer: FC = () => {
                 className={classes.text}
                 variant="body1"
                 color="inherit"
-                component={'span'}
+                component={"span"}
               >
                 E-mail : doctorclean0@naver.com
               </Typography>
@@ -165,7 +241,7 @@ const Footer: FC = () => {
                 className={classes.text}
                 variant="body1"
                 color="inherit"
-                component={'span'}
+                component={"span"}
               >
                 H.P : 010-6483-1286
               </Typography>
@@ -173,7 +249,7 @@ const Footer: FC = () => {
                 className={classes.text}
                 variant="body1"
                 color="inherit"
-                component={'span'}
+                component={"span"}
               >
                 계좌번호 : 기업은행 052-116169-01-013
               </Typography>
@@ -183,6 +259,6 @@ const Footer: FC = () => {
       </Box>
     </div>
   );
-}
+};
 
 export default Footer;

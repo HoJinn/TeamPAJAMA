@@ -8,6 +8,7 @@ import AspectRatioBox from 'components/shape/aspectRatioBox'
 // import { LayoutGrade } from 'recoilStates/layout'
 import theme from 'theme/theme'
 import { useRouter } from 'next/router'
+import { LayoutGrade } from 'recoilStates/layout'
 export type DataProps = {
   size: string
 }
@@ -30,7 +31,20 @@ const useStyles = makeStyles(theme => ({
     backgroundSize: 'cover',
     width:"100%"
   }, 
-    
+  contentWrap: {
+    width:"31%",
+    [theme.breakpoints.down(LayoutGrade.SM)]: {
+      width:"100%",
+      paddingBottom:theme.spacing(5)
+    }
+  },
+  contentFlex: {
+    display:"flex", 
+    justifyContent:"space-between",
+    [theme.breakpoints.down(LayoutGrade.SM)]: {
+      flexDirection: 'column',
+    }
+  },
 }))
 const page1Data=[
   {title:'홈크리닝',subTitle:'Home Cleaning',link:'/home',img:MainImg1,content1:'집 위생상태',content2:'가',content3:'걱정되는 고객님도'},
@@ -71,7 +85,7 @@ const contentMap=page1Data.map((obj,i)=>{
             </Typography>
           </Box>
         </Box>
-        <Box display={"flex"} justifyContent="space-between">
+        <Box className={classes.contentFlex}>
           {contentMap}
         </Box>
         <Box textAlign={"center"} paddingTop={8} paddingBottom={5}>
@@ -132,8 +146,9 @@ const Sec1Card: FC<Section1Props> = ({data}) => {
    };
 
   return (
-    <Box width={"31%"}>
+    <Box className={classes.contentWrap}>
       <Box
+      
         display={"flex"}
         justifyContent="flex-start"
         alignItems="flex-end"

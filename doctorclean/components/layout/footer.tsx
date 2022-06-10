@@ -66,7 +66,10 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 200
   },
   contentsContainer: {
-    paddingTop:theme.spacing(8)
+    paddingTop:theme.spacing(8),
+    [theme.breakpoints.down(LayoutGrade.SM)]: {
+      paddingTop:theme.spacing(2),
+    }
   },
   pcShow: {
     display: "block",
@@ -200,8 +203,9 @@ const Footer: FC = () => {
                 color="inherit"
                 component={"span"}
               >
-                (주)닥터크린&nbsp;&nbsp;&nbsp;|
+                (주)닥터크린{mobileFlag?undefined:<span>&nbsp;&nbsp;&nbsp;|</span>}
               </Typography>
+              {mobileFlag?<br/>:undefined}
               <Typography
                 className={classes.text}
                 variant="body1"
@@ -209,8 +213,9 @@ const Footer: FC = () => {
                 component={"span"}
               >
                 위치 : 서울특별시 강서구 공항대로 23로
-                (일화빌딩)&nbsp;&nbsp;&nbsp;|
+                (일화빌딩){mobileFlag?undefined:<span>&nbsp;&nbsp;&nbsp;|</span>}
               </Typography>
+              {mobileFlag?<br/>:undefined}
               <Typography
                 className={classes.text}
                 variant="body1"
@@ -237,6 +242,7 @@ const Footer: FC = () => {
               >
                 E-mail : doctorclean0@naver.com
               </Typography>
+              {mobileFlag?<br/>:undefined}
               <Typography
                 className={classes.text}
                 variant="body1"
@@ -245,6 +251,7 @@ const Footer: FC = () => {
               >
                 H.P : 010-6483-1286
               </Typography>
+              {mobileFlag?<br/>:undefined}
               <Typography
                 className={classes.text}
                 variant="body1"

@@ -113,10 +113,10 @@ const Brand: NextPage = () => {
           />
         </AspectRatioBox>
         <Box paddingTop={2}>
-          <Typography style={{ lineHeight:'1.8'}} variant="body2">{obj.content1}</Typography>
-          <Typography style={{ lineHeight:'1.8'}} variant="body2">{obj.content2}</Typography>
-          <Typography style={{ lineHeight:'1.8'}} variant="body2">{obj.content3}</Typography>
-          <Typography style={{ lineHeight:'1.8'}} variant="body2">{obj.content4}</Typography>
+          <Typography style={{ lineHeight:'1.8'}} variant="body1">{obj.content1}</Typography>
+          <Typography style={{ lineHeight:'1.8'}} variant="body1">{obj.content2}</Typography>
+          <Typography style={{ lineHeight:'1.8'}} variant="body1">{obj.content3}</Typography>
+          <Typography style={{ lineHeight:'1.8'}} variant="body1">{obj.content4}</Typography>
         </Box>
       </Grid>
     );

@@ -102,7 +102,7 @@ const Brand: NextPage = () => {
 
   const contentMap = contentData.map((obj, i) => {
     return (
-      <Grid key={i} item xs={titleSize} style={{ paddingTop:i===0?'20px': '50px' }}>
+      <Grid key={i} item xs={titleSize} style={{ paddingTop:i===0?'50px': '50px' }}>
         <Typography variant="subtitle2" className="bold" style={{paddingBottom:'15px'}}>{obj.title}</Typography>
         <AspectRatioBox width={imgSize} aspectRatio={0.7}>
           <Box

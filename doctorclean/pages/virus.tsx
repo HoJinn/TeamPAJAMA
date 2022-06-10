@@ -134,11 +134,11 @@ const Brand: NextPage = () => {
           >
             방역∙소독 서비스 안내
           </Typography>
-          {/* <Box className={classes.TopImgWrapMo}>
+          <Box className={classes.TopImgWrapMo}>
           <AspectRatioBox width="100%" aspectRatio={1}>
             <img width={"100%"} src={TopImg} />
           </AspectRatioBox>
-        </Box> */}
+        </Box>
           <Box paddingTop={3}>
             <Typography variant="body1">바이러스와 세균을 제거하여 </Typography>
             <Typography variant="body1">

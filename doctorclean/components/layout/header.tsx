@@ -187,7 +187,7 @@ const pageName=router.asPath
       </Box>
 
       <Box className={classes.mobileHeader} justifyContent="space-between">
-        <Box/>
+        <Box width='24px'/>
       <Box>
           <Button title="메인 이동 버튼" onClick={(_) => movePage("/")}>
               <Box

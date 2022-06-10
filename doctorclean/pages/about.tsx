@@ -1,14 +1,24 @@
 import { NextPage } from 'next';
 import Layout from 'components/layout/main';
-import { Box, Typography } from '@material-ui/core';
-// const useStyles = makeStyles((_theme) => ({
-//   wrapper: {
-//     backgroundRepeat: 'no-repeat',
-//     backgroundPosition: "center",
-//     backgroundSize: 'cover',
-//     width:"100%"
-//   },
-// }))
+import { Box, makeStyles, Typography } from '@material-ui/core';
+import { LayoutGrade } from 'recoilStates/layout';
+const useStyles = makeStyles((theme) => ({
+  aboutTitle: {
+    borderBottom:"2px solid #C4C4C4", 
+    display:"flex", 
+    padding:'20px 50px',
+    [theme.breakpoints.down(LayoutGrade.SM)]: {
+      padding:'20px',
+    }
+  },
+  aboutcontent: {
+    width: "80%",
+    paddingLeft:'5%',
+    [theme.breakpoints.down(LayoutGrade.SM)]: {
+      paddingLeft:'10%',
+    }
+  },
+}))
 const aboutContent=[
   {title:'회사명',content:'㈜닥터크린'},
   {title:'대표자',content:'강태복'},
@@ -20,15 +30,15 @@ const aboutContent=[
   {title:'계좌번호',content:'기업은행 052-116169-01-013'}
 ]
 const Index: NextPage = () => {
-  // const classes = useStyles();
+  const classes = useStyles();
 const aboutContentMap = aboutContent.map((obj, i) => {
   return (
-    <Box  key={i} borderBottom="2px solid #C4C4C4" display="flex" padding='20px 50px'>
+    <Box  key={i} className={classes.aboutTitle}>
       <Box width="20%" textAlign="center">
         <Typography variant="body2">{obj.title}</Typography>
       </Box>
       <Box width="80%" textAlign="left">
-        <Typography variant="body2" style={{ width: "80%",paddingLeft:'5%' }}>{obj.content}</Typography>
+        <Typography variant="body2" className={classes.aboutcontent} >{obj.content}</Typography>
       </Box>
     </Box>
   );

@@ -38,6 +38,24 @@ const useStyles = makeStyles((theme) => ({
       display:'none'
     }
   },
+  TopImgWrapMo: {
+    display:'none',
+    [theme.breakpoints.down(LayoutGrade.SM)]: {
+    display:'block',
+    width:"100%",
+    paddingTop:theme.spacing(2)
+    }
+  },
+  layoutBox:{
+    padding:theme.spacing(2),
+    paddingTop:theme.spacing(10),
+    paddingBottom:theme.spacing(10),
+    display:"flex",
+    justifyContent:"space-between",
+    [theme.breakpoints.down(LayoutGrade.SM)]: {
+      paddingTop:theme.spacing(3),
+      }
+  }
 }));
 const contentData = [
   {
@@ -79,10 +97,11 @@ const Brand: NextPage = () => {
   const classes = useStyles();
   const size = useRecoilValue(windowLayoutSelector)
   const titleSize = size.grade === 'xl' ? 6 : 12
+  const paddingSize = size.grade === 'xl' ? 8 : 0
   const imgSize = size.grade === 'xl' ? "90%" : "100%"
   const contentMap = contentData.map((obj, i) => {
     return (
-      <Grid item xs={titleSize} key={i} style={{ paddingTop: "50px" }}>
+      <Grid item xs={titleSize} key={i} style={{ paddingTop:i===0?'20px': '50px' }}>
         <Typography variant="subtitle2" style={{paddingBottom:'15px'}} className="bold">{obj.title}</Typography>
         <AspectRatioBox width={imgSize} aspectRatio={0.7}>
           <Box
@@ -103,13 +122,7 @@ const Brand: NextPage = () => {
   });
   return (
     <Layout>
-      <Box
-        padding={2}
-        paddingTop={10}
-        paddingBottom={10}
-        display="flex"
-        justifyContent="space-between"
-      >
+      <Box className={classes.layoutBox}>
         <Box className={classes.TopTextWrap}>
           <Typography
             variant="subtitle1" className="bold"
@@ -118,6 +131,16 @@ const Brand: NextPage = () => {
           >
             오피스크리닝 서비스 안내
           </Typography>
+          <Box className={classes.TopImgWrapMo}>
+        <AspectRatioBox width="100%" aspectRatio={0.7}>
+          <Box
+            width="100%"
+            height="100%"
+            className={classes.wrapper}
+            style={{ backgroundImage: `url(${TopImg})` }}
+          />
+        </AspectRatioBox>
+        </Box>
           <Box paddingTop={3}>
             <Typography variant="body1">
               사무환경을 개선하여 직장인들의
@@ -174,7 +197,7 @@ const Brand: NextPage = () => {
           오피스크리닝 서비스 내용
         </Typography>
         <Box paddingTop={2}>
-          <Grid container spacing={8}>
+          <Grid container spacing={paddingSize}>
             {contentMap}
           </Grid>
         </Box>

@@ -42,14 +42,15 @@ const useStyles = makeStyles((theme) => ({
   mapTextWrap: {
     width:"10%",
     [theme.breakpoints.down(LayoutGrade.SM)]: {
-      display:'none'
+      width:"45px",height:'45px'
     }
   },
   mapImgWrap: {
     width:"90%",
     [theme.breakpoints.down(LayoutGrade.SM)]: {
       width:"100%",
-      paddingBottom:theme.spacing(5)
+      paddingBottom:theme.spacing(5),
+      paddingLeft:'15px'
     }
   },
   TopImgWrapMo: {
@@ -60,6 +61,16 @@ const useStyles = makeStyles((theme) => ({
     paddingTop:theme.spacing(2)
     }
   },
+  layoutBox:{
+    padding:theme.spacing(2),
+    paddingTop:theme.spacing(10),
+    paddingBottom:theme.spacing(10),
+    display:"flex",
+    justifyContent:"space-between",
+    [theme.breakpoints.down(LayoutGrade.SM)]: {
+      paddingTop:theme.spacing(3),
+      }
+  }
 }));
 
 const contentData = [
@@ -113,13 +124,7 @@ const Brand: NextPage = () => {
   });
   return (
     <Layout>
-      <Box
-        padding={2}
-        paddingTop={10}
-        paddingBottom={10}
-        display="flex"
-        justifyContent="space-between"
-      >
+      <Box className={classes.layoutBox}>
         <Box className={classes.TopTextWrap}>
           <Typography
             variant="subtitle1"
@@ -129,11 +134,11 @@ const Brand: NextPage = () => {
           >
             방역∙소독 서비스 안내
           </Typography>
-          <Box className={classes.TopImgWrapMo}>
+          {/* <Box className={classes.TopImgWrapMo}>
           <AspectRatioBox width="100%" aspectRatio={1}>
             <img width={"100%"} src={TopImg} />
           </AspectRatioBox>
-        </Box>
+        </Box> */}
           <Box paddingTop={3}>
             <Typography variant="body1">바이러스와 세균을 제거하여 </Typography>
             <Typography variant="body1">

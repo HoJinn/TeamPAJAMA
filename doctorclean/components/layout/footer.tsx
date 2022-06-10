@@ -222,16 +222,16 @@ const Footer: FC = () => {
                 color="inherit"
                 component={"span"}
               >
-                대표자 : 강태복&nbsp;&nbsp;&nbsp;&nbsp;|
+                대표자 : 강태복&nbsp;&nbsp;&nbsp;| &nbsp; 사업자등록번호 : 527-81-02540
               </Typography>
-              <Typography
+              {/* <Typography
                 className={classes.text}
                 variant="body1"
                 color="inherit"
                 component={"span"}
               >
                 사업자등록번호 : 527-81-02540
-              </Typography>
+              </Typography> */}
             </Box>
             <Box paddingTop={1}>
               <Typography

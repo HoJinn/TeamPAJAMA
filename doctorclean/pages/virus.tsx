@@ -13,7 +13,7 @@ import HomeImg1 from "assets/about/virus_img1.png";
 import HomeImg2 from "assets/about/virus_img2.png";
 import HomeImg3 from "assets/about/virus_img3.png";
 import Chart from "assets/about/Chart.png";
-import ChartMo from "assets/about/moChart.png";
+import ChartMo from "assets/about/moChart.jpg";
 // import { LayoutGrade } from "recoilStates/layout";
 import AspectRatioBox from "components/shape/aspectRatioBox";
 import { LayoutGrade, windowLayoutSelector } from "recoilStates/layout";
@@ -42,16 +42,35 @@ const useStyles = makeStyles((theme) => ({
   mapTextWrap: {
     width:"10%",
     [theme.breakpoints.down(LayoutGrade.SM)]: {
-      display:'none'
+      width:"45px",height:'45px'
     }
   },
   mapImgWrap: {
     width:"90%",
     [theme.breakpoints.down(LayoutGrade.SM)]: {
       width:"100%",
-      paddingBottom:theme.spacing(5)
+      paddingBottom:theme.spacing(5),
+      paddingLeft:'15px'
     }
   },
+  TopImgWrapMo: {
+    display:'none',
+    [theme.breakpoints.down(LayoutGrade.SM)]: {
+    display:'block',
+    width:"100%",
+    paddingTop:theme.spacing(2)
+    }
+  },
+  layoutBox:{
+    padding:theme.spacing(2),
+    paddingTop:theme.spacing(10),
+    paddingBottom:theme.spacing(10),
+    display:"flex",
+    justifyContent:"space-between",
+    [theme.breakpoints.down(LayoutGrade.SM)]: {
+      paddingTop:theme.spacing(3),
+      }
+  }
 }));
 
 const contentData = [
@@ -63,16 +82,12 @@ const contentData = [
   {
     title: "독감(인플루엔자)",
     img: HomeImg2,
-<<<<<<< HEAD
-    content: "독감(인플루엔자)은 전염력이 매우 강하며 겨울철에 많이 유행하는데 \n주로 코와 인후를 침범합니다. 재채기나 기침으로 쉽게 공기 중으로 전파되며, \n사람들 간의 직접 접촉에 의해서도 전염되기도 합니다.",
-=======
     content: "독감(인플루엔자)은 전염력이 매우 강하며 겨울철에 많이 유행하는데 \n주로 코와 인후를 침범합니다. 재채기나 기침으로 쉽게 공기 중으로 전파되며,사람들 간의 직접 접촉에 의해서도 전염되기도 합니다.",
->>>>>>> parent of 15b092561 (2.0.1 모바일)
   },
   {
     title: "감기",
     img: HomeImg3,
-    content: "감기를 일으키는 바이러스는 적어도 200종류가 넘는데 바이러스는 감염된 사람의 \n기침이나 재채기에서 퍼져 나온 미세한 입자를 통해 쉽게 전파됩니다. \n집단 시설에서는 바이러스가 빨리 퍼져 감기 바이러스의 노출이 쉽습니다.",
+    content: "감기를 일으키는 바이러스는 적어도 200종류가 넘는데 바이러스는 감염된 사람의 기침이나 재채기에서 퍼져 나온 미세한 입자를 통해 쉽게 전파됩니다. \n집단 시설에서는 바이러스가 빨리 퍼져 감기 바이러스의 노출이 쉽습니다.",
   },
   
 ];
@@ -109,13 +124,7 @@ const Brand: NextPage = () => {
   });
   return (
     <Layout>
-      <Box
-        padding={2}
-        paddingTop={10}
-        paddingBottom={10}
-        display="flex"
-        justifyContent="space-between"
-      >
+      <Box className={classes.layoutBox}>
         <Box className={classes.TopTextWrap}>
           <Typography
             variant="subtitle1"
@@ -125,6 +134,11 @@ const Brand: NextPage = () => {
           >
             방역∙소독 서비스 안내
           </Typography>
+          {/* <Box className={classes.TopImgWrapMo}>
+          <AspectRatioBox width="100%" aspectRatio={1}>
+            <img width={"100%"} src={TopImg} />
+          </AspectRatioBox>
+        </Box> */}
           <Box paddingTop={3}>
             <Typography variant="body1">바이러스와 세균을 제거하여 </Typography>
             <Typography variant="body1">

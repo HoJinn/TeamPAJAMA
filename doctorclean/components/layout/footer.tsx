@@ -1,6 +1,7 @@
-import { makeStyles, Box, Typography, Button, Grid, useTheme, useMediaQuery } from "@material-ui/core";
+import { makeStyles, Box, Typography, Button, Grid } from "@material-ui/core";
 import { useRouter } from "next/dist/client/router";
 import { FC } from "react";
+// import {useTheme } from "@material-ui/core";
 import Phone from 'assets/icon/phone.png';
 import Talk from 'assets/icon/talk.png';
 import Blog from 'assets/icon/blog.png';
@@ -12,7 +13,8 @@ const useStyles = makeStyles(theme => ({
     position: 'relative',
     width: '100%',
     backgroundColor: "#000",
-    color: "#fff"
+    // color: theme.palette.text.secondary,
+    color: "#fff",
   },
   text:{
     color:'#C4C4C4',
@@ -35,10 +37,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   infoBox: {
-    color: theme.palette.grey[500],
-    [theme.breakpoints.down(LayoutGrade.SM)]: {
-      textAlign:"center"
-    }
+    color: theme.palette.grey[500]
   },
   telBox:{
     textAlign:"right",
@@ -73,12 +72,15 @@ const useStyles = makeStyles(theme => ({
   },
   pcShow: {
     display: "block",
-    [theme.breakpoints.down(LayoutGrade.SM)]: {
-      textAlign:'center'
-    }
+    // [theme.breakpoints.down(LayoutGrade.SM)]: {
+    //   display: "none",
+    // }
   },
   moShow: {
-    display: "none"
+    display: "none",
+    // [theme.breakpoints.down(LayoutGrade.SM)]: {
+    //   display: "block",
+    // }
   },
   a: {
     color: "inherit",
@@ -126,10 +128,8 @@ const contentData = [
 const Footer: FC = () => {
   const classes = useStyles();
   const router = useRouter();
-  const theme = useTheme();
-  const mobileFlag = useMediaQuery(theme.breakpoints.down(LayoutGrade.SM));
   const handleClickFn = (e: string) => {
-    window.open(e);
+      router.push(e);
   };
   const contentMap = contentData.map((obj, i) => {
     return (
@@ -179,13 +179,13 @@ const Footer: FC = () => {
           >
             <Typography variant="body1">회사소개</Typography>
           </Button>
-          {mobileFlag?undefined:<Button
+          <Button
             title="페이지 이동"
             onClick={(_) => router.push("/qna")}
             color="inherit"
           >
             <Typography variant="body1">견적문의</Typography>
-          </Button>}
+          </Button>
           <Button
             title="페이지 이동"
             onClick={(_) => router.push("/brand")}

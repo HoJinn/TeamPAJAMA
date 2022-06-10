@@ -62,7 +62,7 @@ const aboutContentMap = aboutContent.map((obj, i) => {
               ㈜닥터크린은 서울 및 수도권 청소와 방역,소독 서비스 전문 업체로서
             </Typography>
             <Typography variant="body1">
-              사람과 환경을 생각하며, 서비스 전문 업체로서 사람과 환경을 생각하며,
+              사람과 환경을 생각하며,
             </Typography>
             <Typography variant="body1">
               고객분들의 공간을 더 가치 있게 하기 위한 최선의 노력을

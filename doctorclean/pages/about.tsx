@@ -58,13 +58,13 @@ const aboutContentMap = aboutContent.map((obj, i) => {
             </Typography>
           </Box>
           <Box textAlign="center" paddingTop={3}>
-            <Typography variant="body1">
-              ㈜닥터크린은 서울 및 수도권 청소와 방역,소독 서비스 전문 업체로서
+            <Typography variant="body2">
+              ㈜닥터크린은 서울 및 수도권 청소와 방역, 소독 서비스 전문 업체로서
             </Typography>
-            <Typography variant="body1">
+            <Typography variant="body2">
               사람과 환경을 생각하며,고객분들의 공간을 더 가치 있게 하기
             </Typography>
-            <Typography variant="body1">
+            <Typography variant="body2">
               위한 최선의 노력을 제공하고 있습니다.
             </Typography>
           </Box>

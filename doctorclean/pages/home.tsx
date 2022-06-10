@@ -38,6 +38,14 @@ const useStyles = makeStyles((theme) => ({
       display:'none'
     }
   },
+  TopImgWrapMo: {
+    display:'none',
+    [theme.breakpoints.down(LayoutGrade.SM)]: {
+    display:'block',
+    width:"100%",
+    paddingTop:theme.spacing(2)
+    }
+  },
 }));
 const contentData = [
   {
@@ -120,6 +128,16 @@ const Brand: NextPage = () => {
           >
             홈클리닝 서비스 안내
           </Typography>
+          <Box className={classes.TopImgWrapMo}>
+        <AspectRatioBox width="100%" aspectRatio={0.7}>
+          <Box
+            width="100%"
+            height="100%"
+            className={classes.wrapper}
+            style={{ backgroundImage: `url(${TopImg})` }}
+          />
+        </AspectRatioBox>
+        </Box>
           <Box paddingTop={3}>
             <Typography variant="body1">가족의 행복한 미래를 꿈꾸는</Typography>
             <Typography variant="body1">

@@ -222,7 +222,7 @@ const Footer: FC = () => {
                 color="inherit"
                 component={"span"}
               >
-                대표자 : 강태복&nbsp;&nbsp;&nbsp;|
+                대표자 : 강태복&nbsp;&nbsp;&nbsp;&nbsp;|
               </Typography>
               <Typography
                 className={classes.text}

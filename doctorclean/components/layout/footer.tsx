@@ -258,7 +258,7 @@ const Footer: FC = () => {
                 color="inherit"
                 component={"span"}
               >
-                계좌번호 : 기업은행 052-116169-01-013 
+                계좌번호 : 기업은행 052-116169-01-013
               </Typography>
             </Box>
           </Box>

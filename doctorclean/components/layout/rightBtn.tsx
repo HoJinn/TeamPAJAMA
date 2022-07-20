@@ -11,8 +11,8 @@ import { useRouter } from 'next/router';
 const btnArr=[
   {title:'고객상담전화',subTitle:'010.6483.1286',link:'tel',icon:Phone},
   {title:'카카오톡상담',link:'http://pf.kakao.com/_Qpptb',icon:Talk},
-  {title:'네이버 블로그',link:'https://blog.naver.com/doctorclean0',icon:Blog},
-  {title:'인스타그램',link:'https://www.instagram.com/doctorclean0/',icon:Insta},
+  {title:'네이버 블로그',link:'https://blog.naver.com/dr_clean8',icon:Blog},
+  {title:'인스타그램',link:'https://www.instagram.com/dr__clean8/',icon:Insta},
   {title:'견적문의',link:'/qna',icon:Write},
 ]
 const Layout: FC = () => {

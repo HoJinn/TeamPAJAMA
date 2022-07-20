@@ -1,0 +1,25 @@
+From 9e7dedc597ed532ff97faf90d8cc23bece6646c0 Mon Sep 17 00:00:00 2001
+From: HoJinChoi <quizho93@gmail.com>
+Date: Wed, 20 Jul 2022 14:54:12 +0900
+Subject: [PATCH] 123
+
+---
+ doctorclean/components/layout/footer.tsx | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/doctorclean/components/layout/footer.tsx b/doctorclean/components/layout/footer.tsx
+index 104ccf4d8..f5582ded9 100644
+--- a/doctorclean/components/layout/footer.tsx
++++ b/doctorclean/components/layout/footer.tsx
+@@ -258,7 +258,7 @@ const Footer: FC = () => {
+                 color="inherit"
+                 component={"span"}
+               >
+-                계좌번호 : 기업은행 052-116169-01-013
++                계좌번호 : 기업은행 052-116169-01-013 
+               </Typography>
+             </Box>
+           </Box>
+-- 
+2.30.2.windows.1
+

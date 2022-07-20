@@ -113,13 +113,13 @@ const contentData = [
     title: "네이버블로그",
     img: Blog,
     color: "#76FB5F",
-    link:'https://blog.naver.com/doctorclean0'
+    link:'https://blog.naver.com/dr_clean8'
   },
   {
     title: "인스타그램",
     img: Insta,
     color: "#FF54A2",
-    link:'https://www.instagram.com/doctorclean0/'
+    link:'https://www.instagram.com/dr__clean8/'
   },
   
 ];
@@ -240,7 +240,7 @@ const Footer: FC = () => {
                 color="inherit"
                 component={"span"}
               >
-                E-mail : doctorclean0@naver.com
+                E-mail : dr_clean8@naver.com
               </Typography>
               {mobileFlag?<br/>:undefined}
               <Typography
